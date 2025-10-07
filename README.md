@@ -41,38 +41,39 @@ Hệ thống được chia thành hai phần:
 ```
 
 ## Cấu trúc thư mục 
+```
+  vnstock/
+  │
+  ├── config
+  │
+  ├── dags/                       # Airflow DAGs cho batch ETL
+  │   └── etl_vnstock_dag.py
+  │
+  ├── src/
+  │   ├── batch/
+  │   │   └── etl_vnstock.py      # Hàm extract, transform, load
+  │   │    
+  │   ├── streaming/
+  │   │   └── streaming_etl.py    # Thu thập dữ liệu real-time
+  │   │   
+  │   └── build.py                # Trực quan dữ liệu
+  │                
+  │
+  ├── data/
+  │   ├── lake/                   # Dữ liệu gốc (từ API)
+  │   ├── temp/                   # Dữ liệu real-time trong ngày
+  │   └── symbol.csv              # Mã chứng khoán 
+  │
+  ├── logs/                             
+  │
+  ├── plugins/ 
+  │
+  ├── requirements.txt
+  ├── docker-compose.yml
+  ├── Dockerfile
+  └── README.md
 
-vnstock/
-│
-├── config
-│
-├── dags/                       # Airflow DAGs cho batch ETL
-│   └── etl_vnstock_dag.py
-│
-├── src/
-│   ├── batch/
-│   │   └── etl_vnstock.py      # Hàm extract, transform, load
-│   │    
-│   ├── streaming/
-│   │   └── streaming_etl.py    # Thu thập dữ liệu real-time
-│   │   
-│   └── build.py                # Trực quan dữ liệu
-│                
-│
-├── data/
-│   ├── lake/                   # Dữ liệu gốc (từ API)
-│   ├── temp/                   # Dữ liệu real-time trong ngày
-│   └── symbol.csv              # Mã chứng khoán 
-│
-├── logs/                             
-│
-├── plugins/ 
-│
-├── requirements.txt
-├── docker-compose.yml
-├── Dockerfile
-└── README.md
-
+```
 
 
 ##  Luồng hoạt động
