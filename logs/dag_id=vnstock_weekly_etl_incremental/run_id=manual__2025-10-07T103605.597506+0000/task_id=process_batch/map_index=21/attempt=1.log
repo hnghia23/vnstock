@@ -1,0 +1,84 @@
+[2025-10-07T10:36:45.807+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T10:36:45.833+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:36:05.597506+00:00 map_index=21 [queued]>
+[2025-10-07T10:36:45.844+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:36:05.597506+00:00 map_index=21 [queued]>
+[2025-10-07T10:36:45.845+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T10:36:45.861+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:36:05.597506+00:00
+[2025-10-07T10:36:45.873+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2975) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T10:36:45.875+0000] {standard_task_runner.py:72} INFO - Started process 2995 to run task
+[2025-10-07T10:36:45.874+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:36:05.597506+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp196smlq4', '--map-index', '21']
+[2025-10-07T10:36:45.876+0000] {standard_task_runner.py:105} INFO - Job 104: Subtask process_batch
+[2025-10-07T10:36:45.894+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T10:36:46.234+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:36:05.597506+00:00 map_index=21 [running]> on host e3278e0f0bbc
+[2025-10-07T10:36:46.402+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:36:05.597506+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:36:05.597506+00:00'
+[2025-10-07T10:36:46.405+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T10:36:46.417+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = HTP
+[2025-10-07T10:36:46.459+0000] {logging_mixin.py:190} INFO - HTP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:36:53.511+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HTP
+[2025-10-07T10:36:53.514+0000] {logging_mixin.py:190} INFO - Không có dữ liệu mới cho HTP
+[2025-10-07T10:36:55.522+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = HTN
+[2025-10-07T10:36:55.563+0000] {logging_mixin.py:190} INFO - HTN: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:36:55.764+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HTN
+[2025-10-07T10:36:55.787+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HTN.csv
+[2025-10-07T10:36:57.788+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = HTM
+[2025-10-07T10:36:57.807+0000] {logging_mixin.py:190} INFO - HTM: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:36:58.099+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HTM
+[2025-10-07T10:36:58.107+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HTM.csv
+[2025-10-07T10:37:00.108+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = HTL
+[2025-10-07T10:37:00.127+0000] {logging_mixin.py:190} INFO - HTL: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T10:37:00.315+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HTL
+[2025-10-07T10:37:00.322+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HTL.csv
+[2025-10-07T10:37:02.323+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = HTK
+[2025-10-07T10:37:02.331+0000] {logging_mixin.py:190} INFO - HTK: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T10:37:06.960+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HTK
+[2025-10-07T10:37:06.964+0000] {logging_mixin.py:190} INFO - Không có dữ liệu mới cho HTK
+[2025-10-07T10:37:08.965+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HTI: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.966+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HTH: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.966+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HTG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.967+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HTE: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.967+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HTC: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.967+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HT1: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.968+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSV: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.968+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSP: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.968+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSM: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.969+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSL: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.969+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSI: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.969+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.970+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HSA: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.970+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HRT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.970+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HRC: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.971+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HRB: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.972+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HQC: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.973+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPX: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.973+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPW: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.974+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.974+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPP: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.975+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPM: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.975+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPI: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.976+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPH: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.976+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.976+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPD: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.977+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HPB: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.977+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HOT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.977+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HOM: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.978+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.978+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNR: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.978+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNP: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.979+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNM: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.979+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNI: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.980+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.980+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNF: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.981+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNE: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.981+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HND: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.981+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNB: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.982+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HNA: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.982+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HMS: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.982+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HMR: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.982+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HMH: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.983+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HMG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.983+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý HMD: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:08.983+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T10:37:08.991+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T10:37:08.991+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:36:05.597506+00:00, map_index=21, execution_date=20251007T103605, start_date=20251007T103645, end_date=20251007T103708
+[2025-10-07T10:37:09.030+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T10:37:09.044+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T10:37:09.046+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

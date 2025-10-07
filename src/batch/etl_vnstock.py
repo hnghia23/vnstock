@@ -1,69 +1,60 @@
 from vnstock import Quote
-import pandas as pd
-from datetime import date
 from tenacity import RetryError
-import os
+from datetime import date, datetime, timedelta
+import pandas as pd
 import ta
+import os
 
 
-# Funtion to extract today stock price data from API, start from date...(default: from 01/01/2020)
-def extract_data(symbol, start_date=None):
+# === Extract: lấy dữ liệu mới kể từ ngày cuối cùng trong file local ===
+def extract_data(symbol, base_path="data/lake", start_date=None):
     today = date.today()
-
-    if start_date is None:
+    if start_date == None:
         start_date = "2020-01-01"
 
+    # Nếu đã có file, đọc ngày cuối cùng để chỉ lấy incremental
+    file_path = os.path.join(base_path, f"{symbol}.csv")
+    if os.path.exists(file_path):
+        try:
+            existing_df = pd.read_csv(file_path)
+            if not existing_df.empty:
+                last_date = pd.to_datetime(existing_df["time"]).max()
+                start_date = (last_date + timedelta(days=1)).strftime("%Y-%m-%d")
+        except Exception as e:
+            print(f"Lỗi khi đọc file {symbol}.csv: {e}")
+
+    print(f"{symbol}: trích dữ liệu từ {start_date} đến {today}")
+
     quote = Quote(symbol=symbol, source="VCI")
-
     try:
-        df = quote.history(
-            start=start_date,
-            end=today.strftime("%Y-%m-%d"),
-        )
-        print("Trích xuất dữ liệu thành công")
-
+        df = quote.history(start=start_date, end=today.strftime("%Y-%m-%d"))
+        print(f"Trích xuất {len(df)} dòng mới cho {symbol}")
     except (ValueError, RetryError):
-        print(f"Không tìm thấy dữ liệu cho {symbol}.")
-        # tạo DataFrame rỗng có cấu trúc chuẩn
+        print(f"Không tìm thấy dữ liệu cho {symbol}")
         df = pd.DataFrame(columns=["time", "open", "high", "low", "close", "volume"])
 
     return df
 
 
-# Function to transform data: create technical indicators (SMA, EMA)
+# === Transform ===
 def transform_data(df):
-    # Add technical indicators: simple moving average (SMA) and exponential moving average (EMA) indicators
-    df["SMA_20"] = ta.trend.sma_indicator(df["close"], window=20).round(4)
-    df["EMA_20"] = ta.trend.ema_indicator(df["close"], window=20).round(4)
-
-    print("Chuyển đổi thành công")
-
+    if not df.empty:
+        df["SMA_20"] = ta.trend.sma_indicator(df["close"], window=20).round(4)
+        df["EMA_20"] = ta.trend.ema_indicator(df["close"], window=20).round(4)
     return df
 
 
-# Function to load data to data lake
-def load_data(df, symbol, path):
-    # create folder if not exist
-    os.makedirs(path, exist_ok=True)
-
-    # save CSV file
-    df.to_csv(f"{path}/{symbol}.csv", index=False)
-
+# === Load/append vào file có sẵn ===
+def load_data(df, symbol, output_dir, mode="append"):
     if df.empty:
-        print("Không có dữ liệu")
+        print(f"Không có dữ liệu mới cho {symbol}")
+        return
+
+    path = os.path.join(output_dir, f"{symbol}.csv")
+    if mode == "append" and os.path.exists(path):
+        df.to_csv(path, mode="a", header=False, index=False)
+        print(f"Append {len(df)} dòng mới vào {path}")
+
     else:
-        print(f"Lưu thành công data tại {path}/{symbol}.csv")
-
-
-# Function to update if there are new data
-def append_data(df, symbol, path):
-    # create folder if not exist
-    os.makedirs(path, exist_ok=True)
-
-    # save CSV file
-    df.to_csv(f"{path}/{symbol}.csv", mode="a", index=False, header=False)
-
-    if df.empty:
-        print("Chưa có dữ liệu mới")
-    else:
-        print("Lưu thành công data mới tại {path}/{symbol}.csv")
+        df.to_csv(path, index=False)
+        print(f"Tạo mới file {path}")

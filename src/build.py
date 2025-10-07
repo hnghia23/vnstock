@@ -3,7 +3,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 
-from src.streaming.streaming_etl import *
+from streaming.streaming_etl import *
 from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
 from pathlib import Path
@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 # root path
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent
 
 
 # Check the symbol for stock code if exist

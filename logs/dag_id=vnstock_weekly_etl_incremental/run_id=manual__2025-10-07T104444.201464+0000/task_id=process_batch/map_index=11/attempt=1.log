@@ -1,0 +1,344 @@
+[2025-10-07T13:45:25.136+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T13:45:25.155+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:44:44.201464+00:00 map_index=11 [queued]>
+[2025-10-07T13:45:25.164+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:44:44.201464+00:00 map_index=11 [queued]>
+[2025-10-07T13:45:25.165+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T13:45:25.176+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:44:44.201464+00:00
+[2025-10-07T13:45:25.185+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=19550) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T13:45:25.187+0000] {standard_task_runner.py:72} INFO - Started process 19560 to run task
+[2025-10-07T13:45:25.186+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:44:44.201464+00:00', '--job-id', '205', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqup_w23m', '--map-index', '11']
+[2025-10-07T13:45:25.188+0000] {standard_task_runner.py:105} INFO - Job 205: Subtask process_batch
+[2025-10-07T13:45:25.202+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T13:45:25.241+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:44:44.201464+00:00 map_index=11 [running]> on host e3278e0f0bbc
+[2025-10-07T13:45:25.474+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:44:44.201464+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:44:44.201464+00:00'
+[2025-10-07T13:45:25.476+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T13:45:25.477+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = S72
+[2025-10-07T13:45:25.505+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ S72: 'date'
+[2025-10-07T13:45:25.516+0000] {logging_mixin.py:190} INFO - S72: trích dữ liệu từ 2025-09-18 đến 2025-10-07
+[2025-10-07T13:45:30.093+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho S72
+[2025-10-07T13:45:30.095+0000] {logging_mixin.py:190} INFO - ℹ️ S72: Không có dữ liệu mới.
+[2025-10-07T13:45:30.096+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = S55
+[2025-10-07T13:45:30.113+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ S55: 'date'
+[2025-10-07T13:45:30.121+0000] {logging_mixin.py:190} INFO - S55: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:45:34.746+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho S55
+[2025-10-07T13:45:34.748+0000] {logging_mixin.py:190} INFO - ℹ️ S55: Không có dữ liệu mới.
+[2025-10-07T13:45:34.749+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = S4A
+[2025-10-07T13:45:34.775+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ S4A: 'date'
+[2025-10-07T13:45:34.782+0000] {logging_mixin.py:190} INFO - S4A: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:45:39.452+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho S4A
+[2025-10-07T13:45:39.454+0000] {logging_mixin.py:190} INFO - ℹ️ S4A: Không có dữ liệu mới.
+[2025-10-07T13:45:39.454+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = S27
+[2025-10-07T13:45:39.470+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ S27: 'date'
+[2025-10-07T13:45:39.476+0000] {logging_mixin.py:190} INFO - S27: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T13:45:44.096+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho S27
+[2025-10-07T13:45:44.098+0000] {logging_mixin.py:190} INFO - ℹ️ S27: Không có dữ liệu mới.
+[2025-10-07T13:45:44.099+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = S12
+[2025-10-07T13:45:44.123+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ S12: 'date'
+[2025-10-07T13:45:44.129+0000] {logging_mixin.py:190} INFO - S12: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:45:48.741+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho S12
+[2025-10-07T13:45:48.743+0000] {logging_mixin.py:190} INFO - ℹ️ S12: Không có dữ liệu mới.
+[2025-10-07T13:45:48.743+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 36.7s...
+[2025-10-07T13:46:25.177+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RYG
+[2025-10-07T13:46:25.195+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RYG: 'date'
+[2025-10-07T13:46:25.201+0000] {logging_mixin.py:190} INFO - RYG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:46:30.662+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RYG
+[2025-10-07T13:46:30.664+0000] {logging_mixin.py:190} INFO - ℹ️ RYG: Không có dữ liệu mới.
+[2025-10-07T13:46:30.664+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RTB
+[2025-10-07T13:46:30.681+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RTB: 'date'
+[2025-10-07T13:46:30.688+0000] {logging_mixin.py:190} INFO - RTB: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:46:35.234+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RTB
+[2025-10-07T13:46:35.236+0000] {logging_mixin.py:190} INFO - ℹ️ RTB: Không có dữ liệu mới.
+[2025-10-07T13:46:35.236+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ROS
+[2025-10-07T13:46:35.253+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ROS: 'date'
+[2025-10-07T13:46:35.260+0000] {logging_mixin.py:190} INFO - ROS: trích dữ liệu từ 2022-08-12 đến 2025-10-07
+[2025-10-07T13:46:39.865+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho ROS
+[2025-10-07T13:46:39.867+0000] {logging_mixin.py:190} INFO - ℹ️ ROS: Không có dữ liệu mới.
+[2025-10-07T13:46:39.867+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RIC
+[2025-10-07T13:46:39.893+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RIC: 'date'
+[2025-10-07T13:46:39.900+0000] {logging_mixin.py:190} INFO - RIC: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:46:44.777+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RIC
+[2025-10-07T13:46:44.778+0000] {logging_mixin.py:190} INFO - ℹ️ RIC: Không có dữ liệu mới.
+[2025-10-07T13:46:44.779+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RGC
+[2025-10-07T13:46:44.795+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RGC: 'date'
+[2025-10-07T13:46:44.801+0000] {logging_mixin.py:190} INFO - RGC: trích dữ liệu từ 2024-01-12 đến 2025-10-07
+[2025-10-07T13:46:50.355+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RGC
+[2025-10-07T13:46:50.356+0000] {logging_mixin.py:190} INFO - ℹ️ RGC: Không có dữ liệu mới.
+[2025-10-07T13:46:50.356+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.8s...
+[2025-10-07T13:47:25.013+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = REE
+[2025-10-07T13:47:25.033+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ REE: 'date'
+[2025-10-07T13:47:25.040+0000] {logging_mixin.py:190} INFO - REE: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:47:29.734+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho REE
+[2025-10-07T13:47:29.735+0000] {logging_mixin.py:190} INFO - ℹ️ REE: Không có dữ liệu mới.
+[2025-10-07T13:47:29.736+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T13:47:30.665+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RDP
+[2025-10-07T13:47:30.693+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RDP: 'date'
+[2025-10-07T13:47:30.701+0000] {logging_mixin.py:190} INFO - RDP: trích dữ liệu từ 2024-11-28 đến 2025-10-07
+[2025-10-07T13:47:35.273+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RDP
+[2025-10-07T13:47:35.275+0000] {logging_mixin.py:190} INFO - ℹ️ RDP: Không có dữ liệu mới.
+[2025-10-07T13:47:35.275+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RCL
+[2025-10-07T13:47:35.292+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RCL: 'date'
+[2025-10-07T13:47:35.298+0000] {logging_mixin.py:190} INFO - RCL: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:47:40.019+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RCL
+[2025-10-07T13:47:40.021+0000] {logging_mixin.py:190} INFO - ℹ️ RCL: Không có dữ liệu mới.
+[2025-10-07T13:47:40.021+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RCD
+[2025-10-07T13:47:40.044+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RCD: 'date'
+[2025-10-07T13:47:40.052+0000] {logging_mixin.py:190} INFO - RCD: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:47:44.628+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RCD
+[2025-10-07T13:47:44.630+0000] {logging_mixin.py:190} INFO - ℹ️ RCD: Không có dữ liệu mới.
+[2025-10-07T13:47:44.631+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T13:47:44.780+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RCC
+[2025-10-07T13:47:44.796+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RCC: 'date'
+[2025-10-07T13:47:44.803+0000] {logging_mixin.py:190} INFO - RCC: trích dữ liệu từ 2025-09-30 đến 2025-10-07
+[2025-10-07T13:47:49.369+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RCC
+[2025-10-07T13:47:49.371+0000] {logging_mixin.py:190} INFO - ℹ️ RCC: Không có dữ liệu mới.
+[2025-10-07T13:47:49.372+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.6s...
+[2025-10-07T13:48:24.873+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RBC
+[2025-10-07T13:48:24.901+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RBC: 'date'
+[2025-10-07T13:48:24.908+0000] {logging_mixin.py:190} INFO - RBC: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T13:48:29.368+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RBC
+[2025-10-07T13:48:29.369+0000] {logging_mixin.py:190} INFO - ℹ️ RBC: Không có dữ liệu mới.
+[2025-10-07T13:48:29.369+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.3s...
+[2025-10-07T13:48:30.667+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RAT
+[2025-10-07T13:48:30.698+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RAT: 'date'
+[2025-10-07T13:48:30.707+0000] {logging_mixin.py:190} INFO - RAT: trích dữ liệu từ 2025-08-29 đến 2025-10-07
+[2025-10-07T13:48:35.391+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RAT
+[2025-10-07T13:48:35.393+0000] {logging_mixin.py:190} INFO - ℹ️ RAT: Không có dữ liệu mới.
+[2025-10-07T13:48:35.394+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = RAL
+[2025-10-07T13:48:35.413+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ RAL: 'date'
+[2025-10-07T13:48:35.420+0000] {logging_mixin.py:190} INFO - RAL: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:48:39.994+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho RAL
+[2025-10-07T13:48:39.996+0000] {logging_mixin.py:190} INFO - ℹ️ RAL: Không có dữ liệu mới.
+[2025-10-07T13:48:39.996+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.0s...
+[2025-10-07T13:48:40.022+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QTP
+[2025-10-07T13:48:40.040+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QTP: 'date'
+[2025-10-07T13:48:40.048+0000] {logging_mixin.py:190} INFO - QTP: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:48:44.542+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QTP
+[2025-10-07T13:48:44.543+0000] {logging_mixin.py:190} INFO - ℹ️ QTP: Không có dữ liệu mới.
+[2025-10-07T13:48:44.544+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T13:48:44.781+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QTC
+[2025-10-07T13:48:44.800+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QTC: 'date'
+[2025-10-07T13:48:44.809+0000] {logging_mixin.py:190} INFO - QTC: trích dữ liệu từ 2025-10-07 đến 2025-10-07
+[2025-10-07T13:48:49.189+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QTC
+[2025-10-07T13:48:49.191+0000] {logging_mixin.py:190} INFO - ℹ️ QTC: Không có dữ liệu mới.
+[2025-10-07T13:48:49.191+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.7s...
+[2025-10-07T13:49:24.708+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QST
+[2025-10-07T13:49:24.733+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QST: 'date'
+[2025-10-07T13:49:24.740+0000] {logging_mixin.py:190} INFO - QST: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:49:29.214+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QST
+[2025-10-07T13:49:29.215+0000] {logging_mixin.py:190} INFO - ℹ️ QST: Không có dữ liệu mới.
+[2025-10-07T13:49:29.216+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.5s...
+[2025-10-07T13:49:30.668+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QSP
+[2025-10-07T13:49:30.687+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QSP: 'date'
+[2025-10-07T13:49:30.694+0000] {logging_mixin.py:190} INFO - QSP: trích dữ liệu từ 2025-10-07 đến 2025-10-07
+[2025-10-07T13:49:35.254+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QSP
+[2025-10-07T13:49:35.256+0000] {logging_mixin.py:190} INFO - ℹ️ QSP: Không có dữ liệu mới.
+[2025-10-07T13:49:35.257+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T13:49:35.395+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QPH
+[2025-10-07T13:49:35.413+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QPH: 'date'
+[2025-10-07T13:49:35.421+0000] {logging_mixin.py:190} INFO - QPH: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:49:38.539+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2025-10-07T14:59:30.258+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QPH
+[2025-10-07T14:59:30.261+0000] {logging_mixin.py:190} INFO - ℹ️ QPH: Không có dữ liệu mới.
+[2025-10-07T14:59:30.275+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QNW
+[2025-10-07T14:59:30.543+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QNW: 'date'
+[2025-10-07T14:59:30.910+0000] {logging_mixin.py:190} INFO - QNW: trích dữ liệu từ 2025-09-18 đến 2025-10-07
+[2025-10-07T14:59:31.240+0000] {job.py:229} INFO - Heartbeat recovered after 4194.41 seconds
+[2025-10-07T14:59:35.667+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QNW
+[2025-10-07T14:59:35.669+0000] {logging_mixin.py:190} INFO - ℹ️ QNW: Không có dữ liệu mới.
+[2025-10-07T14:59:35.670+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QNU
+[2025-10-07T14:59:35.738+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QNU: 'date'
+[2025-10-07T14:59:35.755+0000] {logging_mixin.py:190} INFO - QNU: trích dữ liệu từ 2025-08-12 đến 2025-10-07
+[2025-10-07T14:59:40.514+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QNU
+[2025-10-07T14:59:40.516+0000] {logging_mixin.py:190} INFO - ℹ️ QNU: Không có dữ liệu mới.
+[2025-10-07T14:59:40.516+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QNT
+[2025-10-07T14:59:40.538+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QNT: 'date'
+[2025-10-07T14:59:40.545+0000] {logging_mixin.py:190} INFO - QNT: trích dữ liệu từ 2025-08-14 đến 2025-10-07
+[2025-10-07T14:59:45.234+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho QNT
+[2025-10-07T14:59:45.263+0000] {logging_mixin.py:190} INFO - ℹ️ QNT: Không có dữ liệu mới.
+[2025-10-07T14:59:45.302+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = QNS
+[2025-10-07T14:59:45.878+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ QNS: 'date'
+[2025-10-07T14:59:45.919+0000] {logging_mixin.py:190} INFO - QNS: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T14:59:46.420+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2025-10-07T14:59:46.430+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-10-07T14:59:46.442+0000] {process_utils.py:132} INFO - Sending 15 to group 19560. PIDs of all processes in the group: [19560]
+[2025-10-07T14:59:46.443+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 19560
+[2025-10-07T14:59:46.444+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-10-07T14:59:46.643+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/dag.py", line 99, in process_batch
+    df_new = extract_data(symbol, OUTPUT_DIR, start_date=last_date)
+  File "/opt/***/src/batch/etl_vnstock.py", line 29, in extract_data
+    df = quote.history(start=start_date, end=today.strftime("%Y-%m-%d"))
+  File "/home/***/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/home/***/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 487, in __call__
+    self.sleep(do)
+  File "/home/***/.local/lib/python3.12/site-packages/tenacity/nap.py", line 31, in sleep
+    time.sleep(seconds)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-10-07T14:59:46.660+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag.py", line 99, in process_batch
+    df_new = extract_data(symbol, OUTPUT_DIR, start_date=last_date)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/src/batch/etl_vnstock.py", line 29, in extract_data
+    df = quote.history(start=start_date, end=today.strftime("%Y-%m-%d"))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 487, in __call__
+    self.sleep(do)
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/nap.py", line 31, in sleep
+    time.sleep(seconds)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3097, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-10-07T14:59:46.671+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:44:44.201464+00:00, map_index=11, execution_date=20251007T104444, start_date=20251007T134525, end_date=20251007T145946
+[2025-10-07T14:59:46.714+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T14:59:46.786+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=19560, status='terminated', exitcode=2, started='13:45:24') (19560) terminated with exit code 2

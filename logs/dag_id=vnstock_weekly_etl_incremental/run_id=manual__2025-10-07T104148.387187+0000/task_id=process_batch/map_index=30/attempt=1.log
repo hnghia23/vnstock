@@ -1,0 +1,312 @@
+[2025-10-07T12:06:22.683+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T12:06:22.710+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=30 [queued]>
+[2025-10-07T12:06:22.727+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=30 [queued]>
+[2025-10-07T12:06:22.728+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T12:06:22.739+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:41:48.387187+00:00
+[2025-10-07T12:06:22.747+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=10181) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T12:06:22.749+0000] {standard_task_runner.py:72} INFO - Started process 10191 to run task
+[2025-10-07T12:06:22.748+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:41:48.387187+00:00', '--job-id', '154', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpgfiydlaf', '--map-index', '30']
+[2025-10-07T12:06:22.751+0000] {standard_task_runner.py:105} INFO - Job 154: Subtask process_batch
+[2025-10-07T12:06:22.764+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T12:06:22.805+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=30 [running]> on host e3278e0f0bbc
+[2025-10-07T12:06:23.037+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:41:48.387187+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:41:48.387187+00:00'
+[2025-10-07T12:06:23.039+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T12:06:23.041+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CEG
+[2025-10-07T12:06:23.051+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CEG: 'date'
+[2025-10-07T12:06:23.061+0000] {logging_mixin.py:190} INFO - CEG: trích dữ liệu từ 2025-02-15 đến 2025-10-07
+[2025-10-07T12:06:23.072+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8c0050>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:25.077+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92ccb0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:27.092+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8c0d70>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:27.093+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CEG
+[2025-10-07T12:06:27.095+0000] {logging_mixin.py:190} INFO - ℹ️ CEG: Không có dữ liệu mới.
+[2025-10-07T12:06:27.095+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CEE
+[2025-10-07T12:06:27.104+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CEE: 'date'
+[2025-10-07T12:06:27.111+0000] {logging_mixin.py:190} INFO - CEE: trích dữ liệu từ 2022-07-22 đến 2025-10-07
+[2025-10-07T12:06:27.116+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92e540>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:29.121+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92f170>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:31.128+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92fd70>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:31.130+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CEE
+[2025-10-07T12:06:31.132+0000] {logging_mixin.py:190} INFO - ℹ️ CEE: Không có dữ liệu mới.
+[2025-10-07T12:06:31.134+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CE1
+[2025-10-07T12:06:31.208+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CE1: 'date'
+[2025-10-07T12:06:31.302+0000] {logging_mixin.py:190} INFO - CE1: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T12:06:31.329+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e77c260>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:33.335+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e77ce00>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:35.341+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e77d910>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:35.342+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CE1
+[2025-10-07T12:06:35.344+0000] {logging_mixin.py:190} INFO - ℹ️ CE1: Không có dữ liệu mới.
+[2025-10-07T12:06:35.344+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDR
+[2025-10-07T12:06:35.353+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDR: 'date'
+[2025-10-07T12:06:35.360+0000] {logging_mixin.py:190} INFO - CDR: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T12:06:35.363+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92cb60>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:37.368+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92fd40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:39.372+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92ca10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:39.373+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CDR
+[2025-10-07T12:06:39.375+0000] {logging_mixin.py:190} INFO - ℹ️ CDR: Không có dữ liệu mới.
+[2025-10-07T12:06:39.375+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDP
+[2025-10-07T12:06:39.384+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDP: 'date'
+[2025-10-07T12:06:39.390+0000] {logging_mixin.py:190} INFO - CDP: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T12:06:39.394+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e77d160>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:41.399+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92fe60>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:43.401+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92d340>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T12:06:43.402+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CDP
+[2025-10-07T12:06:43.404+0000] {logging_mixin.py:190} INFO - ℹ️ CDP: Không có dữ liệu mới.
+[2025-10-07T12:06:43.404+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.6s...
+[2025-10-07T12:07:23.040+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDO
+[2025-10-07T12:07:23.059+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDO: 'date'
+[2025-10-07T12:07:23.066+0000] {logging_mixin.py:190} INFO - CDO: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:07:27.579+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CDO
+[2025-10-07T12:07:27.580+0000] {logging_mixin.py:190} INFO - ℹ️ CDO: Không có dữ liệu mới.
+[2025-10-07T12:07:27.580+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDN
+[2025-10-07T12:07:27.596+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDN: 'date'
+[2025-10-07T12:07:27.603+0000] {logging_mixin.py:190} INFO - CDN: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:07:27.734+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CDN
+[2025-10-07T12:07:27.736+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDN: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:07:27.737+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 3.4s...
+[2025-10-07T12:07:31.135+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDH
+[2025-10-07T12:07:31.157+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDH: 'date'
+[2025-10-07T12:07:31.165+0000] {logging_mixin.py:190} INFO - CDH: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:07:31.309+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CDH
+[2025-10-07T12:07:31.313+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDH: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:07:31.313+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.0s...
+[2025-10-07T12:07:35.345+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDG
+[2025-10-07T12:07:35.363+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDG: 'date'
+[2025-10-07T12:07:35.370+0000] {logging_mixin.py:190} INFO - CDG: trích dữ liệu từ 2025-07-30 đến 2025-10-07
+[2025-10-07T12:07:39.921+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CDG
+[2025-10-07T12:07:39.923+0000] {logging_mixin.py:190} INFO - ℹ️ CDG: Không có dữ liệu mới.
+[2025-10-07T12:07:39.923+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CDC
+[2025-10-07T12:07:39.944+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CDC: 'date'
+[2025-10-07T12:07:39.952+0000] {logging_mixin.py:190} INFO - CDC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:07:40.465+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CDC
+[2025-10-07T12:07:40.467+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:07:40.467+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 42.6s...
+[2025-10-07T12:08:24.602+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCV
+[2025-10-07T12:08:24.625+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCV: 'date'
+[2025-10-07T12:08:24.633+0000] {logging_mixin.py:190} INFO - CCV: trích dữ liệu từ 2025-09-09 đến 2025-10-07
+[2025-10-07T12:08:29.502+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CCV
+[2025-10-07T12:08:29.503+0000] {logging_mixin.py:190} INFO - ℹ️ CCV: Không có dữ liệu mới.
+[2025-10-07T12:08:29.503+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCT
+[2025-10-07T12:08:29.521+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCT: 'date'
+[2025-10-07T12:08:29.527+0000] {logging_mixin.py:190} INFO - CCT: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T12:08:34.176+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CCT
+[2025-10-07T12:08:34.178+0000] {logging_mixin.py:190} INFO - ℹ️ CCT: Không có dữ liệu mới.
+[2025-10-07T12:08:34.179+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCR
+[2025-10-07T12:08:34.195+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCR: 'date'
+[2025-10-07T12:08:34.202+0000] {logging_mixin.py:190} INFO - CCR: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:08:34.391+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho CCR
+[2025-10-07T12:08:34.392+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCR: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:08:34.393+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.0s...
+[2025-10-07T12:08:35.346+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCP
+[2025-10-07T12:08:35.365+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCP: 'date'
+[2025-10-07T12:08:35.372+0000] {logging_mixin.py:190} INFO - CCP: trích dữ liệu từ 2025-09-27 đến 2025-10-07
+[2025-10-07T12:08:40.071+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CCP
+[2025-10-07T12:08:40.072+0000] {logging_mixin.py:190} INFO - ℹ️ CCP: Không có dữ liệu mới.
+[2025-10-07T12:08:40.073+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCM
+[2025-10-07T12:08:40.090+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCM: 'date'
+[2025-10-07T12:08:40.095+0000] {logging_mixin.py:190} INFO - CCM: trích dữ liệu từ 2025-09-18 đến 2025-10-07
+[2025-10-07T12:08:44.695+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CCM
+[2025-10-07T12:08:44.696+0000] {logging_mixin.py:190} INFO - ℹ️ CCM: Không có dữ liệu mới.
+[2025-10-07T12:08:44.697+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.9s...
+[2025-10-07T12:09:24.601+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCL
+[2025-10-07T12:09:24.620+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCL: 'date'
+[2025-10-07T12:09:24.629+0000] {logging_mixin.py:190} INFO - CCL: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:09:24.869+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CCL
+[2025-10-07T12:09:24.871+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCL: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:09:24.872+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.6s...
+[2025-10-07T12:09:29.504+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCI
+[2025-10-07T12:09:29.531+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCI: 'date'
+[2025-10-07T12:09:29.538+0000] {logging_mixin.py:190} INFO - CCI: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:09:29.729+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CCI
+[2025-10-07T12:09:29.731+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCI: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:09:29.731+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.4s...
+[2025-10-07T12:09:34.179+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCC
+[2025-10-07T12:09:34.196+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCC: 'date'
+[2025-10-07T12:09:34.202+0000] {logging_mixin.py:190} INFO - CCC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:09:34.391+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CCC
+[2025-10-07T12:09:34.393+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:09:34.394+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.0s...
+[2025-10-07T12:09:35.347+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CCA
+[2025-10-07T12:09:35.371+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CCA: 'date'
+[2025-10-07T12:09:35.379+0000] {logging_mixin.py:190} INFO - CCA: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:09:35.580+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CCA
+[2025-10-07T12:09:35.582+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCA: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:09:35.583+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.5s...
+[2025-10-07T12:09:40.074+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CC4
+[2025-10-07T12:09:40.102+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CC4: 'date'
+[2025-10-07T12:09:40.109+0000] {logging_mixin.py:190} INFO - CC4: trích dữ liệu từ 2025-06-13 đến 2025-10-07
+[2025-10-07T12:09:44.778+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CC4
+[2025-10-07T12:09:44.779+0000] {logging_mixin.py:190} INFO - ℹ️ CC4: Không có dữ liệu mới.
+[2025-10-07T12:09:44.779+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.8s...
+[2025-10-07T12:10:24.600+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CC1
+[2025-10-07T12:10:24.626+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CC1: 'date'
+[2025-10-07T12:10:24.633+0000] {logging_mixin.py:190} INFO - CC1: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:10:24.814+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CC1
+[2025-10-07T12:10:24.816+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CC1: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:10:24.817+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.7s...
+[2025-10-07T12:10:29.505+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CBS
+[2025-10-07T12:10:29.532+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CBS: 'date'
+[2025-10-07T12:10:29.539+0000] {logging_mixin.py:190} INFO - CBS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:10:29.960+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CBS
+[2025-10-07T12:10:29.962+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CBS: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:10:29.962+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.2s...
+[2025-10-07T12:10:34.180+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CBI
+[2025-10-07T12:10:34.198+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CBI: 'date'
+[2025-10-07T12:10:34.204+0000] {logging_mixin.py:190} INFO - CBI: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:10:34.457+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho CBI
+[2025-10-07T12:10:34.458+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CBI: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:10:34.459+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T12:10:35.347+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAV
+[2025-10-07T12:10:35.365+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAV: 'date'
+[2025-10-07T12:10:35.371+0000] {logging_mixin.py:190} INFO - CAV: trích dữ liệu từ 2024-07-18 đến 2025-10-07
+[2025-10-07T12:10:41.908+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CAV
+[2025-10-07T12:10:41.909+0000] {logging_mixin.py:190} INFO - ℹ️ CAV: Không có dữ liệu mới.
+[2025-10-07T12:10:41.910+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAT
+[2025-10-07T12:10:41.927+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAT: 'date'
+[2025-10-07T12:10:41.934+0000] {logging_mixin.py:190} INFO - CAT: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T12:10:42.132+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CAT
+[2025-10-07T12:10:42.134+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAT: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:10:42.134+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 42.5s...
+[2025-10-07T12:11:24.597+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAR
+[2025-10-07T12:11:24.623+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAR: 'date'
+[2025-10-07T12:11:24.629+0000] {logging_mixin.py:190} INFO - CAR: trích dữ liệu từ 2025-08-27 đến 2025-10-07
+[2025-10-07T12:11:40.712+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CAR
+[2025-10-07T12:11:40.714+0000] {logging_mixin.py:190} INFO - ℹ️ CAR: Không có dữ liệu mới.
+[2025-10-07T12:11:40.717+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAP
+[2025-10-07T12:11:40.753+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAP: 'date'
+[2025-10-07T12:11:40.760+0000] {logging_mixin.py:190} INFO - CAP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:11:40.948+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CAP
+[2025-10-07T12:11:40.950+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAP: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:11:40.951+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAN
+[2025-10-07T12:11:40.969+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAN: 'date'
+[2025-10-07T12:11:40.977+0000] {logging_mixin.py:190} INFO - CAN: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:11:45.562+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CAN
+[2025-10-07T12:11:45.564+0000] {logging_mixin.py:190} INFO - ℹ️ CAN: Không có dữ liệu mới.
+[2025-10-07T12:11:45.564+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAG
+[2025-10-07T12:11:45.583+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAG: 'date'
+[2025-10-07T12:11:45.589+0000] {logging_mixin.py:190} INFO - CAG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:11:45.758+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CAG
+[2025-10-07T12:11:45.763+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAG: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:11:45.767+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAD
+[2025-10-07T12:11:45.790+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAD: 'date'
+[2025-10-07T12:11:45.798+0000] {logging_mixin.py:190} INFO - CAD: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:11:50.415+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CAD
+[2025-10-07T12:11:50.417+0000] {logging_mixin.py:190} INFO - ℹ️ CAD: Không có dữ liệu mới.
+[2025-10-07T12:11:50.418+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.2s...
+[2025-10-07T12:12:24.597+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = CAB
+[2025-10-07T12:12:24.627+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ CAB: 'date'
+[2025-10-07T12:12:24.635+0000] {logging_mixin.py:190} INFO - CAB: trích dữ liệu từ 2024-12-31 đến 2025-10-07
+[2025-10-07T12:12:29.375+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CAB
+[2025-10-07T12:12:29.376+0000] {logging_mixin.py:190} INFO - ℹ️ CAB: Không có dữ liệu mới.
+[2025-10-07T12:12:29.376+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 11.3s...
+[2025-10-07T12:12:40.718+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C92
+[2025-10-07T12:12:40.735+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C92: 'date'
+[2025-10-07T12:12:40.742+0000] {logging_mixin.py:190} INFO - C92: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:12:40.977+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho C92
+[2025-10-07T12:12:40.978+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C92: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:12:40.979+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C69
+[2025-10-07T12:12:40.995+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C69: 'date'
+[2025-10-07T12:12:41.002+0000] {logging_mixin.py:190} INFO - C69: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:12:41.165+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho C69
+[2025-10-07T12:12:41.167+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C69: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:12:41.168+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.4s...
+[2025-10-07T12:12:45.564+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C4G
+[2025-10-07T12:12:45.593+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C4G: 'date'
+[2025-10-07T12:12:45.601+0000] {logging_mixin.py:190} INFO - C4G: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:12:46.856+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho C4G
+[2025-10-07T12:12:46.858+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C4G: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:12:46.858+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C47
+[2025-10-07T12:12:46.883+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C47: 'date'
+[2025-10-07T12:12:46.890+0000] {logging_mixin.py:190} INFO - C47: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:12:47.136+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho C47
+[2025-10-07T12:12:47.137+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C47: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:12:47.138+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 37.5s...
+[2025-10-07T12:13:24.596+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C32
+[2025-10-07T12:13:24.616+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C32: 'date'
+[2025-10-07T12:13:24.622+0000] {logging_mixin.py:190} INFO - C32: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:13:24.797+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho C32
+[2025-10-07T12:13:24.799+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C32: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:13:24.800+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 15.9s...
+[2025-10-07T12:13:40.719+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C22
+[2025-10-07T12:13:40.740+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C22: 'date'
+[2025-10-07T12:13:40.747+0000] {logging_mixin.py:190} INFO - C22: trích dữ liệu từ 2025-09-30 đến 2025-10-07
+[2025-10-07T12:13:45.369+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho C22
+[2025-10-07T12:13:45.371+0000] {logging_mixin.py:190} INFO - ℹ️ C22: Không có dữ liệu mới.
+[2025-10-07T12:13:45.372+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C21
+[2025-10-07T12:13:45.389+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C21: 'date'
+[2025-10-07T12:13:45.396+0000] {logging_mixin.py:190} INFO - C21: trích dữ liệu từ 2025-09-27 đến 2025-10-07
+[2025-10-07T12:13:49.994+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho C21
+[2025-10-07T12:13:49.996+0000] {logging_mixin.py:190} INFO - ℹ️ C21: Không có dữ liệu mới.
+[2025-10-07T12:13:49.996+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = C12
+[2025-10-07T12:13:50.012+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ C12: 'date'
+[2025-10-07T12:13:50.018+0000] {logging_mixin.py:190} INFO - C12: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T12:13:54.693+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho C12
+[2025-10-07T12:13:54.694+0000] {logging_mixin.py:190} INFO - ℹ️ C12: Không có dữ liệu mới.
+[2025-10-07T12:13:54.695+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BXT
+[2025-10-07T12:13:54.705+0000] {logging_mixin.py:190} INFO - BXT: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T12:13:59.482+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho BXT
+[2025-10-07T12:13:59.483+0000] {logging_mixin.py:190} INFO - ℹ️ BXT: Không có dữ liệu mới.
+[2025-10-07T12:13:59.484+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 25.1s...
+[2025-10-07T12:14:24.595+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BXH
+[2025-10-07T12:14:24.727+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BXH: 'date'
+[2025-10-07T12:14:24.735+0000] {logging_mixin.py:190} INFO - BXH: trích dữ liệu từ 2025-09-30 đến 2025-10-07
+[2025-10-07T12:14:29.294+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho BXH
+[2025-10-07T12:14:29.296+0000] {logging_mixin.py:190} INFO - ℹ️ BXH: Không có dữ liệu mới.
+[2025-10-07T12:14:29.296+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 11.4s...
+[2025-10-07T12:14:40.719+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BWS
+[2025-10-07T12:14:40.742+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BWS: 'date'
+[2025-10-07T12:14:40.750+0000] {logging_mixin.py:190} INFO - BWS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:14:41.021+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho BWS
+[2025-10-07T12:14:41.023+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BWS: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:14:41.024+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.3s...
+[2025-10-07T12:14:45.371+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BWE
+[2025-10-07T12:14:45.392+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BWE: 'date'
+[2025-10-07T12:14:45.401+0000] {logging_mixin.py:190} INFO - BWE: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:14:45.960+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho BWE
+[2025-10-07T12:14:45.961+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BWE: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:14:45.962+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.0s...
+[2025-10-07T12:14:49.997+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BWA
+[2025-10-07T12:14:50.019+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BWA: 'date'
+[2025-10-07T12:14:50.025+0000] {logging_mixin.py:190} INFO - BWA: trích dữ liệu từ 2025-09-04 đến 2025-10-07
+[2025-10-07T12:14:54.730+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho BWA
+[2025-10-07T12:14:54.732+0000] {logging_mixin.py:190} INFO - ℹ️ BWA: Không có dữ liệu mới.
+[2025-10-07T12:14:54.732+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BVS
+[2025-10-07T12:14:54.756+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BVS: 'date'
+[2025-10-07T12:14:54.762+0000] {logging_mixin.py:190} INFO - BVS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:14:54.951+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho BVS
+[2025-10-07T12:14:54.953+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVS: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:14:54.953+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 29.6s...
+[2025-10-07T12:15:24.594+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BVN
+[2025-10-07T12:15:24.613+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BVN: 'date'
+[2025-10-07T12:15:24.620+0000] {logging_mixin.py:190} INFO - BVN: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T12:15:24.796+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho BVN
+[2025-10-07T12:15:24.797+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVN: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:15:24.798+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 15.9s...
+[2025-10-07T12:15:40.720+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BVL
+[2025-10-07T12:15:40.737+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BVL: 'date'
+[2025-10-07T12:15:40.745+0000] {logging_mixin.py:190} INFO - BVL: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:15:41.012+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho BVL
+[2025-10-07T12:15:41.015+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVL: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:15:41.016+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.4s...
+[2025-10-07T12:15:45.370+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BVH
+[2025-10-07T12:15:45.388+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BVH: 'date'
+[2025-10-07T12:15:45.395+0000] {logging_mixin.py:190} INFO - BVH: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:15:45.617+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho BVH
+[2025-10-07T12:15:45.619+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVH: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:15:45.620+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.4s...
+[2025-10-07T12:15:49.997+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BVG
+[2025-10-07T12:15:50.016+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BVG: 'date'
+[2025-10-07T12:15:50.023+0000] {logging_mixin.py:190} INFO - BVG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:15:54.585+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho BVG
+[2025-10-07T12:15:54.587+0000] {logging_mixin.py:190} INFO - ℹ️ BVG: Không có dữ liệu mới.
+[2025-10-07T12:15:54.587+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T12:15:54.733+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = BVB
+[2025-10-07T12:15:54.760+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ BVB: 'date'
+[2025-10-07T12:15:54.767+0000] {logging_mixin.py:190} INFO - BVB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:15:54.935+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho BVB
+[2025-10-07T12:15:54.938+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVB: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:15:54.938+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T12:15:54.949+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T12:15:54.950+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:41:48.387187+00:00, map_index=30, execution_date=20251007T104148, start_date=20251007T120622, end_date=20251007T121554
+[2025-10-07T12:15:55.000+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T12:15:55.143+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T12:15:55.146+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

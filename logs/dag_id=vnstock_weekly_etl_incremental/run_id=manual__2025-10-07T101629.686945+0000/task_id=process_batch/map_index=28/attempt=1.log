@@ -1,0 +1,69 @@
+[2025-10-07T10:17:27.473+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T10:17:27.519+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:16:29.686945+00:00 map_index=28 [queued]>
+[2025-10-07T10:17:27.532+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:16:29.686945+00:00 map_index=28 [queued]>
+[2025-10-07T10:17:27.533+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T10:17:27.554+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:16:29.686945+00:00
+[2025-10-07T10:17:27.566+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1112) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T10:17:27.569+0000] {standard_task_runner.py:72} INFO - Started process 1234 to run task
+[2025-10-07T10:17:27.568+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:16:29.686945+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp_w6vxif2', '--map-index', '28']
+[2025-10-07T10:17:27.570+0000] {standard_task_runner.py:105} INFO - Job 74: Subtask process_batch
+[2025-10-07T10:17:27.587+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T10:17:27.937+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:16:29.686945+00:00 map_index=28 [running]> on host e3278e0f0bbc
+[2025-10-07T10:17:28.138+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:16:29.686945+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:16:29.686945+00:00'
+[2025-10-07T10:17:28.139+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T10:17:28.142+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DBH: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.144+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DBD: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.146+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DBC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.147+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAT: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.148+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAS: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.150+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAR: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.153+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAN: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.154+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAH: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.154+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAG: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.155+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAE: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.155+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAD: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.155+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý DAC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.156+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý D2D: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.156+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý D17: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.157+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý D11: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.157+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CYC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.158+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CX8: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.158+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CVT: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.159+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CVP: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.159+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CVN: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.160+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTX: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.160+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTW: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.161+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTT: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.162+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTS: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.162+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTR: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.163+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTP: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.164+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTN: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.164+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTI: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.166+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTG: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.167+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTF: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.168+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTD: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.169+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.170+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTB: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.171+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CTA: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.172+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CT6: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.174+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CT5: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.174+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CT3: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.175+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CSV: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.175+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CST: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.176+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CSM: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.176+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CSI: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.179+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CSC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.179+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CRE: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.180+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CRC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.181+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CQT: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.182+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CQN: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.182+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CPI: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.183+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CPH: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.183+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CPC: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.184+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CPA: 'Limiter' object has no attribute 'ratelimit'
+[2025-10-07T10:17:28.185+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T10:17:28.199+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T10:17:28.200+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:16:29.686945+00:00, map_index=28, execution_date=20251007T101629, start_date=20251007T101727, end_date=20251007T101728
+[2025-10-07T10:17:28.312+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T10:17:28.575+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T10:17:28.578+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

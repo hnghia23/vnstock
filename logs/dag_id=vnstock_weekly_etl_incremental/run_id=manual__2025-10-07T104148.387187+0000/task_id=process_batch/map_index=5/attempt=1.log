@@ -1,0 +1,425 @@
+[2025-10-07T10:51:47.080+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T10:51:47.108+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=5 [queued]>
+[2025-10-07T10:51:47.121+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=5 [queued]>
+[2025-10-07T10:51:47.123+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T10:51:47.140+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:41:48.387187+00:00
+[2025-10-07T10:51:47.153+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4280) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T10:51:47.155+0000] {standard_task_runner.py:72} INFO - Started process 4330 to run task
+[2025-10-07T10:51:47.153+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:41:48.387187+00:00', '--job-id', '125', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpx728bucv', '--map-index', '5']
+[2025-10-07T10:51:47.157+0000] {standard_task_runner.py:105} INFO - Job 125: Subtask process_batch
+[2025-10-07T10:51:47.175+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T10:51:47.240+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=5 [running]> on host e3278e0f0bbc
+[2025-10-07T10:51:47.618+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:41:48.387187+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:41:48.387187+00:00'
+[2025-10-07T10:51:47.619+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T10:51:47.622+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TST
+[2025-10-07T10:51:47.644+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TST: 'date'
+[2025-10-07T10:51:47.661+0000] {logging_mixin.py:190} INFO - TST: trích dữ liệu từ 2025-09-27 đến 2025-10-07
+[2025-10-07T10:51:52.381+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TST
+[2025-10-07T10:51:52.383+0000] {logging_mixin.py:190} INFO - ℹ️ TST: Không có dữ liệu mới.
+[2025-10-07T10:51:52.383+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TSJ
+[2025-10-07T10:51:52.391+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TSJ: 'date'
+[2025-10-07T10:51:52.399+0000] {logging_mixin.py:190} INFO - TSJ: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T10:51:56.828+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TSJ
+[2025-10-07T10:51:56.830+0000] {logging_mixin.py:190} INFO - ℹ️ TSJ: Không có dữ liệu mới.
+[2025-10-07T10:51:56.830+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TSG
+[2025-10-07T10:51:56.839+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TSG: 'date'
+[2025-10-07T10:51:56.847+0000] {logging_mixin.py:190} INFO - TSG: trích dữ liệu từ 2025-09-06 đến 2025-10-07
+[2025-10-07T10:52:03.705+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TSG
+[2025-10-07T10:52:03.706+0000] {logging_mixin.py:190} INFO - ℹ️ TSG: Không có dữ liệu mới.
+[2025-10-07T10:52:03.706+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TSD
+[2025-10-07T10:52:03.713+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TSD: 'date'
+[2025-10-07T10:52:03.719+0000] {logging_mixin.py:190} INFO - TSD: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T10:52:08.100+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TSD
+[2025-10-07T10:52:08.101+0000] {logging_mixin.py:190} INFO - ℹ️ TSD: Không có dữ liệu mới.
+[2025-10-07T10:52:08.101+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TSC
+[2025-10-07T10:52:08.108+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TSC: 'date'
+[2025-10-07T10:52:08.114+0000] {logging_mixin.py:190} INFO - TSC: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T10:52:12.514+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TSC
+[2025-10-07T10:52:12.515+0000] {logging_mixin.py:190} INFO - ℹ️ TSC: Không có dữ liệu mới.
+[2025-10-07T10:52:12.516+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.1s...
+[2025-10-07T10:52:48.613+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TSB
+[2025-10-07T10:52:48.677+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TSB: 'date'
+[2025-10-07T10:52:48.726+0000] {logging_mixin.py:190} INFO - TSB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:52:48.785+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92fa40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:50.792+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a4680>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:52.814+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a5130>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:52.817+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TSB
+[2025-10-07T10:52:52.821+0000] {logging_mixin.py:190} INFO - ℹ️ TSB: Không có dữ liệu mới.
+[2025-10-07T10:52:52.823+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TSA
+[2025-10-07T10:52:52.886+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TSA: 'date'
+[2025-10-07T10:52:52.912+0000] {logging_mixin.py:190} INFO - TSA: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:52:52.929+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e9bf470>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:54.943+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e894770>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:56.957+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a55e0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:56.960+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TSA
+[2025-10-07T10:52:56.964+0000] {logging_mixin.py:190} INFO - ℹ️ TSA: Không có dữ liệu mới.
+[2025-10-07T10:52:56.966+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TS5
+[2025-10-07T10:52:57.027+0000] {logging_mixin.py:190} INFO - TS5: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T10:52:57.042+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92c620>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:52:59.055+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92d3a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:01.070+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a6030>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:01.072+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TS5
+[2025-10-07T10:53:01.077+0000] {logging_mixin.py:190} INFO - ℹ️ TS5: Không có dữ liệu mới.
+[2025-10-07T10:53:01.079+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.6s...
+[2025-10-07T10:53:05.991+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TS4
+[2025-10-07T10:53:06.063+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TS4: 'date'
+[2025-10-07T10:53:06.096+0000] {logging_mixin.py:190} INFO - TS4: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T10:53:06.115+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a6bd0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:08.129+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92d880>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:10.136+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e894650>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:10.137+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TS4
+[2025-10-07T10:53:10.139+0000] {logging_mixin.py:190} INFO - ℹ️ TS4: Không có dữ liệu mới.
+[2025-10-07T10:53:10.140+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TS3
+[2025-10-07T10:53:10.166+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TS3: 'date'
+[2025-10-07T10:53:10.180+0000] {logging_mixin.py:190} INFO - TS3: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:53:10.186+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a72c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:12.199+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a7e60>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:14.208+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e856e10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:14.209+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TS3
+[2025-10-07T10:53:14.211+0000] {logging_mixin.py:190} INFO - ℹ️ TS3: Không có dữ liệu mới.
+[2025-10-07T10:53:14.211+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.4s...
+[2025-10-07T10:53:49.657+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TRV
+[2025-10-07T10:53:49.682+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TRV: 'date'
+[2025-10-07T10:53:49.695+0000] {logging_mixin.py:190} INFO - TRV: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:53:49.716+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e770980>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:51.730+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7716d0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:54.017+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e783c50>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:54.020+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TRV
+[2025-10-07T10:53:54.025+0000] {logging_mixin.py:190} INFO - ℹ️ TRV: Không có dữ liệu mới.
+[2025-10-07T10:53:54.027+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TRT
+[2025-10-07T10:53:54.121+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TRT: 'date'
+[2025-10-07T10:53:54.153+0000] {logging_mixin.py:190} INFO - TRT: trích dữ liệu từ 2025-07-17 đến 2025-10-07
+[2025-10-07T10:53:54.174+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7811c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:56.182+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e782a80>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:58.196+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8568a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:53:58.199+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TRT
+[2025-10-07T10:53:58.207+0000] {logging_mixin.py:190} INFO - ℹ️ TRT: Không có dữ liệu mới.
+[2025-10-07T10:53:58.209+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TRS
+[2025-10-07T10:53:58.303+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TRS: 'date'
+[2025-10-07T10:53:58.345+0000] {logging_mixin.py:190} INFO - TRS: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T10:53:58.364+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a7da0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:00.384+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a65a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:02.400+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92fe00>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:02.403+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TRS
+[2025-10-07T10:54:02.409+0000] {logging_mixin.py:190} INFO - ℹ️ TRS: Không có dữ liệu mới.
+[2025-10-07T10:54:02.411+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 3.6s...
+[2025-10-07T10:54:07.092+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TRC
+[2025-10-07T10:54:07.177+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TRC: 'date'
+[2025-10-07T10:54:07.216+0000] {logging_mixin.py:190} INFO - TRC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:54:07.232+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a7380>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:09.240+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a68a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:11.247+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773050>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:11.248+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TRC
+[2025-10-07T10:54:11.250+0000] {logging_mixin.py:190} INFO - ℹ️ TRC: Không có dữ liệu mới.
+[2025-10-07T10:54:11.251+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TRA
+[2025-10-07T10:54:11.280+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TRA: 'date'
+[2025-10-07T10:54:11.295+0000] {logging_mixin.py:190} INFO - TRA: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:54:11.302+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92c560>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:13.316+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773140>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:15.325+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773c80>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:15.326+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TRA
+[2025-10-07T10:54:15.328+0000] {logging_mixin.py:190} INFO - ℹ️ TRA: Không có dữ liệu mới.
+[2025-10-07T10:54:15.328+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.3s...
+[2025-10-07T10:54:50.214+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TR1
+[2025-10-07T10:54:50.304+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TR1: 'date'
+[2025-10-07T10:54:50.347+0000] {logging_mixin.py:190} INFO - TR1: trích dữ liệu từ 2025-10-02 đến 2025-10-07
+[2025-10-07T10:54:50.392+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7724e0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:52.449+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e772120>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:54.486+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a7d40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:54.488+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TR1
+[2025-10-07T10:54:54.492+0000] {logging_mixin.py:190} INFO - ℹ️ TR1: Không có dữ liệu mới.
+[2025-10-07T10:54:54.494+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TQW
+[2025-10-07T10:54:54.585+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TQW: 'date'
+[2025-10-07T10:54:54.631+0000] {logging_mixin.py:190} INFO - TQW: trích dữ liệu từ 2025-08-21 đến 2025-10-07
+[2025-10-07T10:54:54.651+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e834800>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:56.668+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8353a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:58.689+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773ce0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:54:58.692+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TQW
+[2025-10-07T10:54:58.698+0000] {logging_mixin.py:190} INFO - ℹ️ TQW: Không có dữ liệu mới.
+[2025-10-07T10:54:58.700+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TQN
+[2025-10-07T10:54:58.770+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TQN: 'date'
+[2025-10-07T10:54:58.824+0000] {logging_mixin.py:190} INFO - TQN: trích dữ liệu từ 2025-05-31 đến 2025-10-07
+[2025-10-07T10:54:58.834+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835730>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:00.849+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e836270>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:02.863+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e836e10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:02.865+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TQN
+[2025-10-07T10:55:02.867+0000] {logging_mixin.py:190} INFO - ℹ️ TQN: Không có dữ liệu mới.
+[2025-10-07T10:55:02.868+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.2s...
+[2025-10-07T10:55:07.930+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TPS
+[2025-10-07T10:55:07.992+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TPS: 'date'
+[2025-10-07T10:55:08.008+0000] {logging_mixin.py:190} INFO - TPS: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T10:55:08.014+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8344a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:10.020+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8378c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:12.026+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b30410>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:12.027+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TPS
+[2025-10-07T10:55:12.029+0000] {logging_mixin.py:190} INFO - ℹ️ TPS: Không có dữ liệu mới.
+[2025-10-07T10:55:12.030+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TPP
+[2025-10-07T10:55:12.063+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TPP: 'date'
+[2025-10-07T10:55:12.078+0000] {logging_mixin.py:190} INFO - TPP: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T10:55:12.084+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e837800>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:14.099+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835730>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:16.114+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b30bf0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:16.117+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TPP
+[2025-10-07T10:55:16.122+0000] {logging_mixin.py:190} INFO - ℹ️ TPP: Không có dữ liệu mới.
+[2025-10-07T10:55:16.123+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.1s...
+[2025-10-07T10:55:50.894+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TPH
+[2025-10-07T10:55:51.006+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TPH: 'date'
+[2025-10-07T10:55:51.026+0000] {logging_mixin.py:190} INFO - TPH: trích dữ liệu từ 2025-07-10 đến 2025-10-07
+[2025-10-07T10:55:51.033+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b31df0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:53.048+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835f40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:55.097+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8376e0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:55.327+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TPH
+[2025-10-07T10:55:55.332+0000] {logging_mixin.py:190} INFO - ℹ️ TPH: Không có dữ liệu mới.
+[2025-10-07T10:55:55.333+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TPC
+[2025-10-07T10:55:55.356+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TPC: 'date'
+[2025-10-07T10:55:55.363+0000] {logging_mixin.py:190} INFO - TPC: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T10:55:55.367+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835a60>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:57.381+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e770050>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:59.396+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e771a60>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:55:59.399+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TPC
+[2025-10-07T10:55:59.405+0000] {logging_mixin.py:190} INFO - ℹ️ TPC: Không có dữ liệu mới.
+[2025-10-07T10:55:59.407+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TPB
+[2025-10-07T10:55:59.489+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TPB: 'date'
+[2025-10-07T10:55:59.530+0000] {logging_mixin.py:190} INFO - TPB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:55:59.546+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773590>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:01.562+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e837650>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:03.570+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8351f0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:03.570+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TPB
+[2025-10-07T10:56:03.572+0000] {logging_mixin.py:190} INFO - ℹ️ TPB: Không có dữ liệu mới.
+[2025-10-07T10:56:03.572+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.4s...
+[2025-10-07T10:56:07.931+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TOW
+[2025-10-07T10:56:08.010+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TOW: 'date'
+[2025-10-07T10:56:08.070+0000] {logging_mixin.py:190} INFO - TOW: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T10:56:08.091+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e856e10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:10.904+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e837fe0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:12.913+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773560>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:12.914+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TOW
+[2025-10-07T10:56:12.916+0000] {logging_mixin.py:190} INFO - ℹ️ TOW: Không có dữ liệu mới.
+[2025-10-07T10:56:12.916+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TOT
+[2025-10-07T10:56:12.940+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TOT: 'date'
+[2025-10-07T10:56:12.952+0000] {logging_mixin.py:190} INFO - TOT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:56:12.958+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a4350>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:14.977+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a6390>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:16.986+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e837350>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:16.987+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TOT
+[2025-10-07T10:56:16.989+0000] {logging_mixin.py:190} INFO - ℹ️ TOT: Không có dữ liệu mới.
+[2025-10-07T10:56:16.989+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 33.9s...
+[2025-10-07T10:56:51.691+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TOS
+[2025-10-07T10:56:51.768+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TOS: 'date'
+[2025-10-07T10:56:51.802+0000] {logging_mixin.py:190} INFO - TOS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:56:51.853+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a5c40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:53.860+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92cd40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:55.872+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92eea0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:55.875+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TOS
+[2025-10-07T10:56:55.881+0000] {logging_mixin.py:190} INFO - ℹ️ TOS: Không có dữ liệu mới.
+[2025-10-07T10:56:55.883+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TOP
+[2025-10-07T10:56:55.939+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TOP: 'date'
+[2025-10-07T10:56:55.964+0000] {logging_mixin.py:190} INFO - TOP: trích dữ liệu từ 2025-05-31 đến 2025-10-07
+[2025-10-07T10:56:55.978+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a5a30>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:57.986+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92d7c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:56:59.999+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92ee10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:00.003+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TOP
+[2025-10-07T10:57:00.008+0000] {logging_mixin.py:190} INFO - ℹ️ TOP: Không có dữ liệu mới.
+[2025-10-07T10:57:00.010+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNW
+[2025-10-07T10:57:00.079+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNW: 'date'
+[2025-10-07T10:57:00.114+0000] {logging_mixin.py:190} INFO - TNW: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T10:57:00.139+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e781a90>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:02.156+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92fec0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:04.171+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a45c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:04.174+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNW
+[2025-10-07T10:57:04.179+0000] {logging_mixin.py:190} INFO - ℹ️ TNW: Không có dữ liệu mới.
+[2025-10-07T10:57:04.181+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 3.8s...
+[2025-10-07T10:57:07.933+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNV
+[2025-10-07T10:57:07.963+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNV: 'date'
+[2025-10-07T10:57:07.975+0000] {logging_mixin.py:190} INFO - TNV: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:57:07.981+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e780290>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:09.995+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e782360>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:12.703+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e836a80>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:12.707+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNV
+[2025-10-07T10:57:12.713+0000] {logging_mixin.py:190} INFO - ℹ️ TNV: Không có dữ liệu mới.
+[2025-10-07T10:57:12.715+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T10:57:12.919+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNT
+[2025-10-07T10:57:13.008+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNT: 'date'
+[2025-10-07T10:57:13.049+0000] {logging_mixin.py:190} INFO - TNT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:57:13.064+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e781f10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:15.082+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7823f0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:17.097+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b31430>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:17.100+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNT
+[2025-10-07T10:57:17.104+0000] {logging_mixin.py:190} INFO - ℹ️ TNT: Không có dữ liệu mới.
+[2025-10-07T10:57:17.107+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.6s...
+[2025-10-07T10:57:52.342+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNS
+[2025-10-07T10:57:52.436+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNS: 'date'
+[2025-10-07T10:57:52.472+0000] {logging_mixin.py:190} INFO - TNS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:57:52.524+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e781fd0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:54.536+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92e810>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:56.551+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e772660>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:56.555+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNS
+[2025-10-07T10:57:56.560+0000] {logging_mixin.py:190} INFO - ℹ️ TNS: Không có dữ liệu mới.
+[2025-10-07T10:57:56.562+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNP
+[2025-10-07T10:57:56.654+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNP: 'date'
+[2025-10-07T10:57:56.702+0000] {logging_mixin.py:190} INFO - TNP: trích dữ liệu từ 2025-09-18 đến 2025-10-07
+[2025-10-07T10:57:56.719+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b33320>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:57:58.735+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92f7a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:00.912+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a7b30>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:00.915+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNP
+[2025-10-07T10:58:00.919+0000] {logging_mixin.py:190} INFO - ℹ️ TNP: Không có dữ liệu mới.
+[2025-10-07T10:58:00.920+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNM
+[2025-10-07T10:58:00.992+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNM: 'date'
+[2025-10-07T10:58:01.028+0000] {logging_mixin.py:190} INFO - TNM: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T10:58:01.048+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b32b40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:03.061+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b33bc0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:05.081+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b336e0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:05.084+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNM
+[2025-10-07T10:58:05.091+0000] {logging_mixin.py:190} INFO - ℹ️ TNM: Không có dữ liệu mới.
+[2025-10-07T10:58:05.094+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.8s...
+[2025-10-07T10:58:07.938+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNI
+[2025-10-07T10:58:08.014+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNI: 'date'
+[2025-10-07T10:58:08.052+0000] {logging_mixin.py:190} INFO - TNI: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:58:08.107+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b323c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:10.117+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b31700>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:12.938+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b32510>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:12.941+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNI
+[2025-10-07T10:58:12.947+0000] {logging_mixin.py:190} INFO - ℹ️ TNI: Không có dữ liệu mới.
+[2025-10-07T10:58:12.950+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNH
+[2025-10-07T10:58:13.070+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNH: 'date'
+[2025-10-07T10:58:13.127+0000] {logging_mixin.py:190} INFO - TNH: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:58:13.146+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e770350>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:15.162+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e772930>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:17.172+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a5c70>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:17.173+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNH
+[2025-10-07T10:58:17.174+0000] {logging_mixin.py:190} INFO - ℹ️ TNH: Không có dữ liệu mới.
+[2025-10-07T10:58:17.175+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.2s...
+[2025-10-07T10:58:53.131+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNG
+[2025-10-07T10:58:53.205+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNG: 'date'
+[2025-10-07T10:58:53.247+0000] {logging_mixin.py:190} INFO - TNG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:58:53.264+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e771c40>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:55.329+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835a30>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:57.373+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835670>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:57.377+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNG
+[2025-10-07T10:58:57.387+0000] {logging_mixin.py:190} INFO - ℹ️ TNG: Không có dữ liệu mới.
+[2025-10-07T10:58:57.389+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNC
+[2025-10-07T10:58:57.464+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNC: 'date'
+[2025-10-07T10:58:57.501+0000] {logging_mixin.py:190} INFO - TNC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:58:57.517+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773380>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:58:59.531+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e780a10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:01.545+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e781370>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:01.547+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNC
+[2025-10-07T10:59:01.556+0000] {logging_mixin.py:190} INFO - ℹ️ TNC: Không có dữ liệu mới.
+[2025-10-07T10:59:01.558+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNB
+[2025-10-07T10:59:01.614+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNB: 'date'
+[2025-10-07T10:59:01.627+0000] {logging_mixin.py:190} INFO - TNB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:59:01.634+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b33050>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:03.640+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e856870>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:05.689+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7722a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:05.692+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNB
+[2025-10-07T10:59:05.696+0000] {logging_mixin.py:190} INFO - ℹ️ TNB: Không có dữ liệu mới.
+[2025-10-07T10:59:05.697+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.2s...
+[2025-10-07T10:59:07.941+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TNA
+[2025-10-07T10:59:07.969+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TNA: 'date'
+[2025-10-07T10:59:07.984+0000] {logging_mixin.py:190} INFO - TNA: trích dữ liệu từ 2024-09-14 đến 2025-10-07
+[2025-10-07T10:59:07.991+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b33170>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:10.016+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b32a50>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:12.033+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b30b60>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:12.036+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TNA
+[2025-10-07T10:59:12.040+0000] {logging_mixin.py:190} INFO - ℹ️ TNA: Không có dữ liệu mới.
+[2025-10-07T10:59:12.041+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T10:59:12.952+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TN1
+[2025-10-07T10:59:13.033+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TN1: 'date'
+[2025-10-07T10:59:13.072+0000] {logging_mixin.py:190} INFO - TN1: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:59:13.741+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e782150>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:15.756+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e835370>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:17.777+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e834710>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:17.780+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TN1
+[2025-10-07T10:59:17.786+0000] {logging_mixin.py:190} INFO - ℹ️ TN1: Không có dữ liệu mới.
+[2025-10-07T10:59:17.790+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.3s...
+[2025-10-07T10:59:53.777+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMX
+[2025-10-07T10:59:53.849+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMX: 'date'
+[2025-10-07T10:59:53.886+0000] {logging_mixin.py:190} INFO - TMX: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T10:59:53.944+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b302c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:55.960+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e781310>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:57.999+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e783b90>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T10:59:58.001+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMX
+[2025-10-07T10:59:58.004+0000] {logging_mixin.py:190} INFO - ℹ️ TMX: Không có dữ liệu mới.
+[2025-10-07T10:59:58.005+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMW
+[2025-10-07T10:59:58.056+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMW: 'date'
+[2025-10-07T10:59:58.078+0000] {logging_mixin.py:190} INFO - TMW: trích dữ liệu từ 2025-09-20 đến 2025-10-07
+[2025-10-07T10:59:58.088+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92f140>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:00.097+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e772570>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:02.200+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8364e0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:02.203+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMW
+[2025-10-07T11:00:02.207+0000] {logging_mixin.py:190} INFO - ℹ️ TMW: Không có dữ liệu mới.
+[2025-10-07T11:00:02.210+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMT
+[2025-10-07T11:00:02.291+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMT: 'date'
+[2025-10-07T11:00:02.369+0000] {logging_mixin.py:190} INFO - TMT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T11:00:02.383+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e81c260>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:04.421+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b33da0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:06.428+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7703e0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:06.429+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMT
+[2025-10-07T11:00:06.431+0000] {logging_mixin.py:190} INFO - ℹ️ TMT: Không có dữ liệu mới.
+[2025-10-07T11:00:06.432+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.5s...
+[2025-10-07T11:00:07.943+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMS
+[2025-10-07T11:00:07.968+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMS: 'date'
+[2025-10-07T11:00:07.982+0000] {logging_mixin.py:190} INFO - TMS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T11:00:07.988+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e81d820>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:09.998+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e81eed0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:12.013+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b32330>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:12.016+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMS
+[2025-10-07T11:00:12.020+0000] {logging_mixin.py:190} INFO - ℹ️ TMS: Không có dữ liệu mới.
+[2025-10-07T11:00:12.022+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T11:00:12.954+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMP
+[2025-10-07T11:00:13.021+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMP: 'date'
+[2025-10-07T11:00:13.041+0000] {logging_mixin.py:190} INFO - TMP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T11:00:13.048+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e81e270>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:15.570+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e81cb30>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:17.583+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e81eb10>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:17.587+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMP
+[2025-10-07T11:00:17.591+0000] {logging_mixin.py:190} INFO - ℹ️ TMP: Không có dữ liệu mới.
+[2025-10-07T11:00:17.598+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 36.2s...
+[2025-10-07T11:00:54.258+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMG
+[2025-10-07T11:00:54.336+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMG: 'date'
+[2025-10-07T11:00:54.373+0000] {logging_mixin.py:190} INFO - TMG: trích dữ liệu từ 2025-09-30 đến 2025-10-07
+[2025-10-07T11:00:54.428+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e834e90>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:56.439+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8351c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:58.445+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7a4290>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:00:58.447+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMG
+[2025-10-07T11:00:58.448+0000] {logging_mixin.py:190} INFO - ℹ️ TMG: Không có dữ liệu mới.
+[2025-10-07T11:00:58.449+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMC
+[2025-10-07T11:00:58.471+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMC: 'date'
+[2025-10-07T11:00:58.484+0000] {logging_mixin.py:190} INFO - TMC: trích dữ liệu từ 2025-10-02 đến 2025-10-07
+[2025-10-07T11:00:58.490+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7839b0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:01:00.498+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e8344a0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:01:02.513+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e836d20>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:01:02.515+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMC
+[2025-10-07T11:01:02.520+0000] {logging_mixin.py:190} INFO - ℹ️ TMC: Không có dữ liệu mới.
+[2025-10-07T11:01:02.522+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TMB
+[2025-10-07T11:01:02.605+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TMB: 'date'
+[2025-10-07T11:01:02.644+0000] {logging_mixin.py:190} INFO - TMB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T11:01:02.660+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e91d790>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:01:04.676+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7738c0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:01:06.697+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e7837d0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:01:06.706+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TMB
+[2025-10-07T11:01:06.716+0000] {logging_mixin.py:190} INFO - ℹ️ TMB: Không có dữ liệu mới.
+[2025-10-07T11:01:06.718+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.2s...
+[2025-10-07T11:11:54.831+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TLT
+[2025-10-07T11:11:54.885+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TLT: 'date'
+[2025-10-07T11:11:54.910+0000] {logging_mixin.py:190} INFO - TLT: trích dữ liệu từ 2025-09-18 đến 2025-10-07
+[2025-10-07T11:11:54.937+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e773680>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:11:57.122+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b31310>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:11:58.250+0000] {job.py:229} INFO - Heartbeat recovered after 651.96 seconds
+[2025-10-07T11:11:59.568+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b33500>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:11:59.603+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TLT
+[2025-10-07T11:11:59.644+0000] {logging_mixin.py:190} INFO - ℹ️ TLT: Không có dữ liệu mới.
+[2025-10-07T11:11:59.664+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TLP
+[2025-10-07T11:11:59.856+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TLP: 'date'
+[2025-10-07T11:11:59.983+0000] {logging_mixin.py:190} INFO - TLP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T11:12:00.002+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e837fb0>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:12:02.013+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e619e92f140>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:12:04.216+0000] {client.py:83} ERROR - API request failed: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Max retries exceeded with url: /api/chart/OHLCChart/gap (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e61c7b31670>: Failed to resolve 'trading.vietcap.com.vn' ([Errno -2] Name or service not known)"))
+[2025-10-07T11:12:04.218+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TLP
+[2025-10-07T11:12:04.224+0000] {logging_mixin.py:190} INFO - ℹ️ TLP: Không có dữ liệu mới.
+[2025-10-07T11:12:04.225+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T11:12:04.245+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T11:12:04.247+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:41:48.387187+00:00, map_index=5, execution_date=20251007T104148, start_date=20251007T105147, end_date=20251007T111204
+[2025-10-07T11:12:04.357+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T11:12:04.617+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T11:12:04.621+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,175 @@
+[2025-10-07T10:41:58.162+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T10:41:58.198+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=2 [queued]>
+[2025-10-07T10:41:58.214+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=2 [queued]>
+[2025-10-07T10:41:58.216+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T10:41:58.237+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:41:48.387187+00:00
+[2025-10-07T10:41:58.256+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:41:48.387187+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpb5zq37vg', '--map-index', '2']
+[2025-10-07T10:41:58.261+0000] {standard_task_runner.py:105} INFO - Job 121: Subtask process_batch
+[2025-10-07T10:41:58.257+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3558) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T10:41:58.262+0000] {standard_task_runner.py:72} INFO - Started process 3620 to run task
+[2025-10-07T10:41:58.284+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T10:41:58.357+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:41:48.387187+00:00 map_index=2 [running]> on host e3278e0f0bbc
+[2025-10-07T10:41:58.860+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:41:48.387187+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:41:48.387187+00:00'
+[2025-10-07T10:41:58.862+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T10:41:58.864+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VMA
+[2025-10-07T10:41:58.880+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VMA: 'date'
+[2025-10-07T10:41:58.881+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VMA: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:41:58.881+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLW
+[2025-10-07T10:41:58.897+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLW: 'date'
+[2025-10-07T10:41:58.898+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLW: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:41:58.899+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLP
+[2025-10-07T10:41:58.936+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLP: 'date'
+[2025-10-07T10:41:58.938+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLP: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:41:58.940+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLG
+[2025-10-07T10:41:58.952+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLG: 'date'
+[2025-10-07T10:41:58.953+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLG: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:41:58.953+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLF
+[2025-10-07T10:41:58.967+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLF: 'date'
+[2025-10-07T10:41:58.968+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLF: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:41:58.969+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:43:03.848+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLC
+[2025-10-07T10:43:03.874+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLC: 'date'
+[2025-10-07T10:43:03.875+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:43:03.875+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLB
+[2025-10-07T10:43:03.910+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLB: 'date'
+[2025-10-07T10:43:03.912+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLB: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:43:03.913+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLA
+[2025-10-07T10:43:03.944+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLA: 'date'
+[2025-10-07T10:43:03.945+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLA: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:43:03.945+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VKP
+[2025-10-07T10:43:03.974+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VKP: 'date'
+[2025-10-07T10:43:03.975+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VKP: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:43:03.976+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VKD
+[2025-10-07T10:43:04.001+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VKD: 'date'
+[2025-10-07T10:43:04.002+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VKD: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:43:04.002+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.8s...
+[2025-10-07T10:44:08.774+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VKC
+[2025-10-07T10:44:08.800+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VKC: 'date'
+[2025-10-07T10:44:08.801+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VKC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:44:08.801+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VJC
+[2025-10-07T10:44:08.817+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VJC: 'date'
+[2025-10-07T10:44:08.818+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VJC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:44:08.818+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIX
+[2025-10-07T10:44:08.836+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIX: 'date'
+[2025-10-07T10:44:08.836+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIX: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:44:08.837+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIW
+[2025-10-07T10:44:08.868+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIW: 'date'
+[2025-10-07T10:44:08.868+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIW: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:44:08.869+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIT
+[2025-10-07T10:44:08.887+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIT: 'date'
+[2025-10-07T10:44:08.888+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIT: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:44:08.888+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:45:13.861+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIS
+[2025-10-07T10:45:13.879+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIS: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:45:13.880+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIR
+[2025-10-07T10:45:13.900+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIR: 'date'
+[2025-10-07T10:45:13.901+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIR: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:45:13.901+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIP
+[2025-10-07T10:45:13.919+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIP: 'date'
+[2025-10-07T10:45:13.919+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIP: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:45:13.920+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIN
+[2025-10-07T10:45:13.937+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIN: 'date'
+[2025-10-07T10:45:13.937+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIN: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:45:13.938+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIM
+[2025-10-07T10:45:13.957+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIM: 'date'
+[2025-10-07T10:45:13.958+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIM: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:45:13.958+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:46:18.957+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIH
+[2025-10-07T10:46:18.976+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIH: 'date'
+[2025-10-07T10:46:18.976+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIH: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:46:18.976+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIG
+[2025-10-07T10:46:18.994+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIG: 'date'
+[2025-10-07T10:46:18.994+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIG: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:46:18.995+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIF
+[2025-10-07T10:46:19.012+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIF: 'date'
+[2025-10-07T10:46:19.012+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIF: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:46:19.013+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIE
+[2025-10-07T10:46:19.028+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIE: 'date'
+[2025-10-07T10:46:19.029+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIE: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:46:19.029+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VID
+[2025-10-07T10:46:19.049+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VID: 'date'
+[2025-10-07T10:46:19.049+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VID: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:46:19.050+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:47:23.990+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIC
+[2025-10-07T10:47:24.037+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIC: 'date'
+[2025-10-07T10:47:24.038+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:47:24.038+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIB
+[2025-10-07T10:47:24.055+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIB: 'date'
+[2025-10-07T10:47:24.055+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIB: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:47:24.056+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHM
+[2025-10-07T10:47:24.070+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHM: 'date'
+[2025-10-07T10:47:24.071+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHM: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:47:24.072+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHL
+[2025-10-07T10:47:24.088+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHL: 'date'
+[2025-10-07T10:47:24.089+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHL: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:47:24.089+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHI
+[2025-10-07T10:47:24.093+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHI: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:47:24.094+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:48:28.933+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHH
+[2025-10-07T10:48:28.955+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHH: 'date'
+[2025-10-07T10:48:28.955+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHH: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:48:28.956+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHG
+[2025-10-07T10:48:28.969+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHG: 'date'
+[2025-10-07T10:48:28.969+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHG: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:48:28.970+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHF
+[2025-10-07T10:48:28.984+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHF: 'date'
+[2025-10-07T10:48:28.985+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHF: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:48:28.985+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHE
+[2025-10-07T10:48:29.001+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHE: 'date'
+[2025-10-07T10:48:29.001+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHE: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:48:29.002+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHD
+[2025-10-07T10:48:29.017+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHD: 'date'
+[2025-10-07T10:48:29.018+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHD: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:48:29.018+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:49:35.126+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHC
+[2025-10-07T10:49:35.142+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHC: 'date'
+[2025-10-07T10:49:35.143+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:49:35.143+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGV
+[2025-10-07T10:49:35.158+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGV: 'date'
+[2025-10-07T10:49:35.158+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGV: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:49:35.158+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGT
+[2025-10-07T10:49:35.175+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGT: 'date'
+[2025-10-07T10:49:35.176+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGT: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:49:35.176+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGS
+[2025-10-07T10:49:35.197+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGS: 'date'
+[2025-10-07T10:49:35.197+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGS: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:49:35.198+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGR
+[2025-10-07T10:49:35.216+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGR: 'date'
+[2025-10-07T10:49:35.216+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGR: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:49:35.217+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:50:38.899+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGP
+[2025-10-07T10:50:38.918+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGP: 'date'
+[2025-10-07T10:50:38.918+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGP: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:50:38.919+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGL
+[2025-10-07T10:50:38.938+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGL: 'date'
+[2025-10-07T10:50:38.938+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGL: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:50:38.938+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGI
+[2025-10-07T10:50:38.968+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGI: 'date'
+[2025-10-07T10:50:38.971+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGI: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:50:38.972+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGG
+[2025-10-07T10:50:38.991+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGG: 'date'
+[2025-10-07T10:50:38.991+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGG: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:50:38.992+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGC
+[2025-10-07T10:50:39.009+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGC: 'date'
+[2025-10-07T10:50:39.010+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:50:39.010+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 59.9s...
+[2025-10-07T10:51:44.100+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFS
+[2025-10-07T10:51:44.122+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFS: 'date'
+[2025-10-07T10:51:44.122+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VFS: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:51:44.123+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFR
+[2025-10-07T10:51:44.141+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFR: 'date'
+[2025-10-07T10:51:44.141+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VFR: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:51:44.142+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFG
+[2025-10-07T10:51:44.160+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFG: 'date'
+[2025-10-07T10:51:44.161+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VFG: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:51:44.161+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFC
+[2025-10-07T10:51:44.178+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFC: 'date'
+[2025-10-07T10:51:44.178+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VFC: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:51:44.179+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VET
+[2025-10-07T10:51:44.196+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VET: 'date'
+[2025-10-07T10:51:44.197+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VET: extract_data() got an unexpected keyword argument 'start_date'
+[2025-10-07T10:51:44.197+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T10:51:44.207+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T10:51:44.208+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:41:48.387187+00:00, map_index=2, execution_date=20251007T104148, start_date=20251007T104158, end_date=20251007T105144
+[2025-10-07T10:51:44.294+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T10:51:44.305+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

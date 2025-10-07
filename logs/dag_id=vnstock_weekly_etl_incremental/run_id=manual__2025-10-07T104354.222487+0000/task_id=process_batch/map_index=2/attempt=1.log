@@ -1,0 +1,308 @@
+[2025-10-07T12:15:57.440+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T12:15:57.459+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:43:54.222487+00:00 map_index=2 [queued]>
+[2025-10-07T12:15:57.469+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:43:54.222487+00:00 map_index=2 [queued]>
+[2025-10-07T12:15:57.469+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T12:15:57.480+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:43:54.222487+00:00
+[2025-10-07T12:15:57.488+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=11219) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T12:15:57.490+0000] {standard_task_runner.py:72} INFO - Started process 11229 to run task
+[2025-10-07T12:15:57.489+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:43:54.222487+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpli0n54zx', '--map-index', '2']
+[2025-10-07T12:15:57.492+0000] {standard_task_runner.py:105} INFO - Job 161: Subtask process_batch
+[2025-10-07T12:15:57.505+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T12:15:57.546+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:43:54.222487+00:00 map_index=2 [running]> on host e3278e0f0bbc
+[2025-10-07T12:15:57.852+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:43:54.222487+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:43:54.222487+00:00'
+[2025-10-07T12:15:57.853+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T12:15:57.855+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VMA
+[2025-10-07T12:15:57.866+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VMA: 'date'
+[2025-10-07T12:15:57.875+0000] {logging_mixin.py:190} INFO - VMA: trích dữ liệu từ 2025-05-28 đến 2025-10-07
+[2025-10-07T12:16:02.750+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VMA
+[2025-10-07T12:16:02.753+0000] {logging_mixin.py:190} INFO - ℹ️ VMA: Không có dữ liệu mới.
+[2025-10-07T12:16:02.754+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLW
+[2025-10-07T12:16:02.766+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLW: 'date'
+[2025-10-07T12:16:02.779+0000] {logging_mixin.py:190} INFO - VLW: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T12:16:07.621+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VLW
+[2025-10-07T12:16:07.674+0000] {logging_mixin.py:190} INFO - ℹ️ VLW: Không có dữ liệu mới.
+[2025-10-07T12:16:07.695+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLP
+[2025-10-07T12:16:07.736+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLP: 'date'
+[2025-10-07T12:16:07.759+0000] {logging_mixin.py:190} INFO - VLP: trích dữ liệu từ 2024-12-05 đến 2025-10-07
+[2025-10-07T12:16:12.771+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VLP
+[2025-10-07T12:16:12.773+0000] {logging_mixin.py:190} INFO - ℹ️ VLP: Không có dữ liệu mới.
+[2025-10-07T12:16:12.773+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLG
+[2025-10-07T12:16:12.794+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLG: 'date'
+[2025-10-07T12:16:12.804+0000] {logging_mixin.py:190} INFO - VLG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T12:16:17.941+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VLG
+[2025-10-07T12:16:17.960+0000] {logging_mixin.py:190} INFO - ℹ️ VLG: Không có dữ liệu mới.
+[2025-10-07T12:16:17.971+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLF
+[2025-10-07T12:16:18.152+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLF: 'date'
+[2025-10-07T12:16:18.350+0000] {logging_mixin.py:190} INFO - VLF: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:16:23.114+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VLF
+[2025-10-07T12:16:23.163+0000] {logging_mixin.py:190} INFO - ℹ️ VLF: Không có dữ liệu mới.
+[2025-10-07T12:16:23.183+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.7s...
+[2025-10-07T12:16:57.871+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLC
+[2025-10-07T12:16:57.887+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLC: 'date'
+[2025-10-07T12:16:57.894+0000] {logging_mixin.py:190} INFO - VLC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:16:58.114+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VLC
+[2025-10-07T12:16:58.117+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:16:58.117+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.6s...
+[2025-10-07T12:17:02.755+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLB
+[2025-10-07T12:17:02.770+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLB: 'date'
+[2025-10-07T12:17:02.777+0000] {logging_mixin.py:190} INFO - VLB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:17:03.031+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VLB
+[2025-10-07T12:17:03.032+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLB: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:17:03.033+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.7s...
+[2025-10-07T12:17:07.696+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VLA
+[2025-10-07T12:17:07.712+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VLA: 'date'
+[2025-10-07T12:17:07.718+0000] {logging_mixin.py:190} INFO - VLA: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T12:17:07.871+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VLA
+[2025-10-07T12:17:07.872+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VLA: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:17:07.873+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.9s...
+[2025-10-07T12:17:12.774+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VKP
+[2025-10-07T12:17:12.791+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VKP: 'date'
+[2025-10-07T12:17:12.798+0000] {logging_mixin.py:190} INFO - VKP: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T12:17:17.400+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VKP
+[2025-10-07T12:17:17.402+0000] {logging_mixin.py:190} INFO - ℹ️ VKP: Không có dữ liệu mới.
+[2025-10-07T12:17:17.403+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.6s...
+[2025-10-07T12:17:17.972+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VKD
+[2025-10-07T12:17:17.994+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VKD: 'date'
+[2025-10-07T12:17:18.000+0000] {logging_mixin.py:190} INFO - VKD: trích dữ liệu từ 2022-07-29 đến 2025-10-07
+[2025-10-07T12:17:22.621+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VKD
+[2025-10-07T12:17:22.622+0000] {logging_mixin.py:190} INFO - ℹ️ VKD: Không có dữ liệu mới.
+[2025-10-07T12:17:22.623+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.2s...
+[2025-10-07T12:17:57.870+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VKC
+[2025-10-07T12:17:57.880+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VKC: 'date'
+[2025-10-07T12:17:57.888+0000] {logging_mixin.py:190} INFO - VKC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:18:02.446+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VKC
+[2025-10-07T12:18:02.448+0000] {logging_mixin.py:190} INFO - ℹ️ VKC: Không có dữ liệu mới.
+[2025-10-07T12:18:02.448+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.3s...
+[2025-10-07T12:18:02.755+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VJC
+[2025-10-07T12:18:02.765+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VJC: 'date'
+[2025-10-07T12:18:02.771+0000] {logging_mixin.py:190} INFO - VJC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:18:03.056+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VJC
+[2025-10-07T12:18:03.059+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VJC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:18:03.059+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.6s...
+[2025-10-07T12:18:07.697+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIX
+[2025-10-07T12:18:07.705+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIX: 'date'
+[2025-10-07T12:18:07.712+0000] {logging_mixin.py:190} INFO - VIX: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:18:07.893+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VIX
+[2025-10-07T12:18:07.895+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIX: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:18:07.895+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.9s...
+[2025-10-07T12:18:12.775+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIW
+[2025-10-07T12:18:12.783+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIW: 'date'
+[2025-10-07T12:18:12.789+0000] {logging_mixin.py:190} INFO - VIW: trích dữ liệu từ 2025-10-02 đến 2025-10-07
+[2025-10-07T12:18:12.948+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho VIW
+[2025-10-07T12:18:12.950+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIW: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:18:12.951+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 5.0s...
+[2025-10-07T12:18:17.972+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIT
+[2025-10-07T12:18:17.979+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIT: 'date'
+[2025-10-07T12:18:17.986+0000] {logging_mixin.py:190} INFO - VIT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:18:18.139+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho VIT
+[2025-10-07T12:18:18.142+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIT: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:18:18.142+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.7s...
+[2025-10-07T12:18:57.869+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIS
+[2025-10-07T12:18:57.881+0000] {logging_mixin.py:190} INFO - VIS: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T12:19:02.557+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VIS
+[2025-10-07T12:19:02.558+0000] {logging_mixin.py:190} INFO - ℹ️ VIS: Không có dữ liệu mới.
+[2025-10-07T12:19:02.559+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T12:19:02.756+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIR
+[2025-10-07T12:19:02.773+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIR: 'date'
+[2025-10-07T12:19:02.779+0000] {logging_mixin.py:190} INFO - VIR: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:19:07.562+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VIR
+[2025-10-07T12:19:07.564+0000] {logging_mixin.py:190} INFO - ℹ️ VIR: Không có dữ liệu mới.
+[2025-10-07T12:19:07.565+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T12:19:07.697+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIP
+[2025-10-07T12:19:07.705+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIP: 'date'
+[2025-10-07T12:19:07.712+0000] {logging_mixin.py:190} INFO - VIP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:19:07.909+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VIP
+[2025-10-07T12:19:07.911+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIP: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:19:07.911+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.9s...
+[2025-10-07T12:19:12.776+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIN
+[2025-10-07T12:19:12.787+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIN: 'date'
+[2025-10-07T12:19:12.793+0000] {logging_mixin.py:190} INFO - VIN: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T12:19:17.357+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VIN
+[2025-10-07T12:19:17.359+0000] {logging_mixin.py:190} INFO - ℹ️ VIN: Không có dữ liệu mới.
+[2025-10-07T12:19:17.359+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.6s...
+[2025-10-07T12:19:17.972+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIM
+[2025-10-07T12:19:17.981+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIM: 'date'
+[2025-10-07T12:19:17.988+0000] {logging_mixin.py:190} INFO - VIM: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:19:18.241+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho VIM
+[2025-10-07T12:19:18.242+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIM: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:19:18.243+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.6s...
+[2025-10-07T12:19:57.868+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIH
+[2025-10-07T12:19:57.875+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIH: 'date'
+[2025-10-07T12:19:57.881+0000] {logging_mixin.py:190} INFO - VIH: trích dữ liệu từ 2025-10-02 đến 2025-10-07
+[2025-10-07T12:20:07.461+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VIH
+[2025-10-07T12:20:07.462+0000] {logging_mixin.py:190} INFO - ℹ️ VIH: Không có dữ liệu mới.
+[2025-10-07T12:20:07.463+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIG
+[2025-10-07T12:20:07.478+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIG: 'date'
+[2025-10-07T12:20:07.485+0000] {logging_mixin.py:190} INFO - VIG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:20:07.680+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VIG
+[2025-10-07T12:20:07.682+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIG: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:20:07.683+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.0s...
+[2025-10-07T12:20:07.698+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIF
+[2025-10-07T12:20:07.706+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIF: 'date'
+[2025-10-07T12:20:07.714+0000] {logging_mixin.py:190} INFO - VIF: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:20:07.907+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VIF
+[2025-10-07T12:20:07.909+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIF: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:20:07.909+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.9s...
+[2025-10-07T12:20:12.776+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIE
+[2025-10-07T12:20:12.783+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIE: 'date'
+[2025-10-07T12:20:12.789+0000] {logging_mixin.py:190} INFO - VIE: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T12:20:17.312+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VIE
+[2025-10-07T12:20:17.314+0000] {logging_mixin.py:190} INFO - ℹ️ VIE: Không có dữ liệu mới.
+[2025-10-07T12:20:17.314+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.7s...
+[2025-10-07T12:20:17.973+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VID
+[2025-10-07T12:20:17.981+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VID: 'date'
+[2025-10-07T12:20:17.988+0000] {logging_mixin.py:190} INFO - VID: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:20:18.184+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VID
+[2025-10-07T12:20:18.186+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VID: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:20:18.187+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.7s...
+[2025-10-07T12:20:57.868+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIC
+[2025-10-07T12:20:57.877+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIC: 'date'
+[2025-10-07T12:20:57.884+0000] {logging_mixin.py:190} INFO - VIC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:20:58.080+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VIC
+[2025-10-07T12:20:58.082+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:20:58.083+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 9.4s...
+[2025-10-07T12:21:07.463+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VIB
+[2025-10-07T12:21:07.471+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VIB: 'date'
+[2025-10-07T12:21:07.478+0000] {logging_mixin.py:190} INFO - VIB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:21:07.672+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VIB
+[2025-10-07T12:21:07.673+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VIB: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:21:07.674+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.0s...
+[2025-10-07T12:21:07.699+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHM
+[2025-10-07T12:21:07.708+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHM: 'date'
+[2025-10-07T12:21:07.714+0000] {logging_mixin.py:190} INFO - VHM: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:21:07.992+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VHM
+[2025-10-07T12:21:07.993+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHM: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:21:07.994+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.8s...
+[2025-10-07T12:21:12.777+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHL
+[2025-10-07T12:21:12.787+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHL: 'date'
+[2025-10-07T12:21:12.793+0000] {logging_mixin.py:190} INFO - VHL: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:21:13.014+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho VHL
+[2025-10-07T12:21:13.015+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHL: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:21:13.016+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 5.0s...
+[2025-10-07T12:21:17.972+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHI
+[2025-10-07T12:21:17.982+0000] {logging_mixin.py:190} INFO - VHI: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T12:21:22.736+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VHI
+[2025-10-07T12:21:22.737+0000] {logging_mixin.py:190} INFO - ℹ️ VHI: Không có dữ liệu mới.
+[2025-10-07T12:21:22.737+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.1s...
+[2025-10-07T12:21:57.867+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHH
+[2025-10-07T12:21:57.875+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHH: 'date'
+[2025-10-07T12:21:57.881+0000] {logging_mixin.py:190} INFO - VHH: trích dữ liệu từ 2025-08-29 đến 2025-10-07
+[2025-10-07T12:22:02.541+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VHH
+[2025-10-07T12:22:02.543+0000] {logging_mixin.py:190} INFO - ℹ️ VHH: Không có dữ liệu mới.
+[2025-10-07T12:22:02.543+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.9s...
+[2025-10-07T12:22:07.464+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHG
+[2025-10-07T12:22:07.471+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHG: 'date'
+[2025-10-07T12:22:07.477+0000] {logging_mixin.py:190} INFO - VHG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:22:07.748+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VHG
+[2025-10-07T12:22:07.749+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHG: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:22:07.750+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHF
+[2025-10-07T12:22:07.757+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHF: 'date'
+[2025-10-07T12:22:07.763+0000] {logging_mixin.py:190} INFO - VHF: trích dữ liệu từ 2025-07-26 đến 2025-10-07
+[2025-10-07T12:22:12.438+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VHF
+[2025-10-07T12:22:12.440+0000] {logging_mixin.py:190} INFO - ℹ️ VHF: Không có dữ liệu mới.
+[2025-10-07T12:22:12.441+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.3s...
+[2025-10-07T12:22:12.778+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHE
+[2025-10-07T12:22:12.787+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHE: 'date'
+[2025-10-07T12:22:12.793+0000] {logging_mixin.py:190} INFO - VHE: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:22:12.995+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VHE
+[2025-10-07T12:22:12.997+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHE: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:22:12.997+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 5.0s...
+[2025-10-07T12:22:17.971+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHD
+[2025-10-07T12:22:17.986+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHD: 'date'
+[2025-10-07T12:22:17.994+0000] {logging_mixin.py:190} INFO - VHD: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:22:18.485+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho VHD
+[2025-10-07T12:22:18.486+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHD: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:22:18.487+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.4s...
+[2025-10-07T12:22:57.866+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VHC
+[2025-10-07T12:22:57.876+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VHC: 'date'
+[2025-10-07T12:22:57.883+0000] {logging_mixin.py:190} INFO - VHC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:22:58.088+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VHC
+[2025-10-07T12:22:58.089+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VHC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:22:58.090+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 9.4s...
+[2025-10-07T12:23:07.465+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGV
+[2025-10-07T12:23:07.472+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGV: 'date'
+[2025-10-07T12:23:07.478+0000] {logging_mixin.py:190} INFO - VGV: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:23:07.661+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGV
+[2025-10-07T12:23:07.663+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGV: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:23:07.663+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T12:23:07.750+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGT
+[2025-10-07T12:23:07.759+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGT: 'date'
+[2025-10-07T12:23:07.766+0000] {logging_mixin.py:190} INFO - VGT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:23:08.028+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGT
+[2025-10-07T12:23:08.029+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGT: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:23:08.030+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.7s...
+[2025-10-07T12:23:12.779+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGS
+[2025-10-07T12:23:12.788+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGS: 'date'
+[2025-10-07T12:23:12.794+0000] {logging_mixin.py:190} INFO - VGS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:23:13.014+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGS
+[2025-10-07T12:23:13.015+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGS: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:23:13.016+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 5.0s...
+[2025-10-07T12:23:17.970+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGR
+[2025-10-07T12:23:17.985+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGR: 'date'
+[2025-10-07T12:23:17.992+0000] {logging_mixin.py:190} INFO - VGR: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:23:18.176+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho VGR
+[2025-10-07T12:23:18.178+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGR: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:23:18.178+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.7s...
+[2025-10-07T12:23:57.865+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGP
+[2025-10-07T12:23:57.874+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGP: 'date'
+[2025-10-07T12:23:57.880+0000] {logging_mixin.py:190} INFO - VGP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:23:58.135+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGP
+[2025-10-07T12:23:58.137+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGP: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:23:58.138+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 9.3s...
+[2025-10-07T12:24:07.465+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGL
+[2025-10-07T12:24:07.472+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGL: 'date'
+[2025-10-07T12:24:07.478+0000] {logging_mixin.py:190} INFO - VGL: trích dữ liệu từ 2025-09-24 đến 2025-10-07
+[2025-10-07T12:24:12.108+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VGL
+[2025-10-07T12:24:12.112+0000] {logging_mixin.py:190} INFO - ℹ️ VGL: Không có dữ liệu mới.
+[2025-10-07T12:24:12.112+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGI
+[2025-10-07T12:24:12.127+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGI: 'date'
+[2025-10-07T12:24:12.141+0000] {logging_mixin.py:190} INFO - VGI: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:24:12.332+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGI
+[2025-10-07T12:24:12.334+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGI: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:24:12.335+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.4s...
+[2025-10-07T12:24:12.780+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGG
+[2025-10-07T12:24:12.795+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGG: 'date'
+[2025-10-07T12:24:12.805+0000] {logging_mixin.py:190} INFO - VGG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:24:13.037+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGG
+[2025-10-07T12:24:13.039+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGG: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:24:13.040+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 4.9s...
+[2025-10-07T12:24:17.969+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VGC
+[2025-10-07T12:24:17.983+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VGC: 'date'
+[2025-10-07T12:24:17.990+0000] {logging_mixin.py:190} INFO - VGC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:24:18.237+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VGC
+[2025-10-07T12:24:18.239+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VGC: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:24:18.240+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 39.6s...
+[2025-10-07T12:24:57.864+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFS
+[2025-10-07T12:24:57.871+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFS: 'date'
+[2025-10-07T12:24:57.878+0000] {logging_mixin.py:190} INFO - VFS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:24:58.033+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VFS
+[2025-10-07T12:24:58.034+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VFS: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:24:58.034+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 9.4s...
+[2025-10-07T12:25:07.466+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFR
+[2025-10-07T12:25:07.475+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFR: 'date'
+[2025-10-07T12:25:07.482+0000] {logging_mixin.py:190} INFO - VFR: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:25:12.137+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VFR
+[2025-10-07T12:25:12.139+0000] {logging_mixin.py:190} INFO - ℹ️ VFR: Không có dữ liệu mới.
+[2025-10-07T12:25:12.140+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFG
+[2025-10-07T12:25:12.148+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFG: 'date'
+[2025-10-07T12:25:12.156+0000] {logging_mixin.py:190} INFO - VFG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:25:12.310+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VFG
+[2025-10-07T12:25:12.313+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VFG: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:25:12.313+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.5s...
+[2025-10-07T12:25:12.781+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VFC
+[2025-10-07T12:25:12.796+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VFC: 'date'
+[2025-10-07T12:25:12.804+0000] {logging_mixin.py:190} INFO - VFC: trích dữ liệu từ 2025-09-30 đến 2025-10-07
+[2025-10-07T12:25:17.473+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho VFC
+[2025-10-07T12:25:17.475+0000] {logging_mixin.py:190} INFO - ℹ️ VFC: Không có dữ liệu mới.
+[2025-10-07T12:25:17.475+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.5s...
+[2025-10-07T12:25:17.970+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = VET
+[2025-10-07T12:25:17.982+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ VET: 'date'
+[2025-10-07T12:25:17.989+0000] {logging_mixin.py:190} INFO - VET: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:25:18.172+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho VET
+[2025-10-07T12:25:18.174+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý VET: load_data() got an unexpected keyword argument 'mode'
+[2025-10-07T12:25:18.175+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T12:25:18.185+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T12:25:18.186+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:43:54.222487+00:00, map_index=2, execution_date=20251007T104354, start_date=20251007T121557, end_date=20251007T122518
+[2025-10-07T12:25:18.253+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T12:25:18.427+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T12:25:18.429+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

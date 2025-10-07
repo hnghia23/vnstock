@@ -1,0 +1,339 @@
+[2025-10-07T12:57:43.703+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T12:57:43.727+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:43:54.222487+00:00 map_index=20 [queued]>
+[2025-10-07T12:57:43.739+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:43:54.222487+00:00 map_index=20 [queued]>
+[2025-10-07T12:57:43.740+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T12:57:43.754+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:43:54.222487+00:00
+[2025-10-07T12:57:43.764+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=14534) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T12:57:43.765+0000] {standard_task_runner.py:72} INFO - Started process 14546 to run task
+[2025-10-07T12:57:43.764+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:43:54.222487+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp19ycf35u', '--map-index', '20']
+[2025-10-07T12:57:43.767+0000] {standard_task_runner.py:105} INFO - Job 179: Subtask process_batch
+[2025-10-07T12:57:43.781+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T12:57:43.829+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:43:54.222487+00:00 map_index=20 [running]> on host e3278e0f0bbc
+[2025-10-07T12:57:44.151+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:43:54.222487+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:43:54.222487+00:00'
+[2025-10-07T12:57:44.152+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T12:57:44.155+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ISG
+[2025-10-07T12:57:44.168+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ISG: 'date'
+[2025-10-07T12:57:44.178+0000] {logging_mixin.py:190} INFO - ISG: trích dữ liệu từ 2025-08-23 đến 2025-10-07
+[2025-10-07T12:57:48.885+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho ISG
+[2025-10-07T12:57:48.887+0000] {logging_mixin.py:190} INFO - ℹ️ ISG: Không có dữ liệu mới.
+[2025-10-07T12:57:48.887+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IRC
+[2025-10-07T12:57:48.895+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IRC: 'date'
+[2025-10-07T12:57:48.903+0000] {logging_mixin.py:190} INFO - IRC: trích dữ liệu từ 2025-10-07 đến 2025-10-07
+[2025-10-07T12:57:53.638+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IRC
+[2025-10-07T12:57:53.640+0000] {logging_mixin.py:190} INFO - ℹ️ IRC: Không có dữ liệu mới.
+[2025-10-07T12:57:53.641+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IPH
+[2025-10-07T12:57:53.652+0000] {logging_mixin.py:190} INFO - IPH: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T12:57:58.271+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IPH
+[2025-10-07T12:57:58.273+0000] {logging_mixin.py:190} INFO - ℹ️ IPH: Không có dữ liệu mới.
+[2025-10-07T12:57:58.273+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IPA
+[2025-10-07T12:57:58.288+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IPA: 'date'
+[2025-10-07T12:57:58.295+0000] {logging_mixin.py:190} INFO - IPA: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T12:58:02.933+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IPA
+[2025-10-07T12:58:02.934+0000] {logging_mixin.py:190} INFO - ℹ️ IPA: Không có dữ liệu mới.
+[2025-10-07T12:58:02.935+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = INN
+[2025-10-07T12:58:02.943+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ INN: 'date'
+[2025-10-07T12:58:02.950+0000] {logging_mixin.py:190} INFO - INN: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T12:58:07.473+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho INN
+[2025-10-07T12:58:07.474+0000] {logging_mixin.py:190} INFO - ℹ️ INN: Không có dữ liệu mới.
+[2025-10-07T12:58:07.475+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 36.7s...
+[2025-10-07T12:58:44.150+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ING
+[2025-10-07T12:58:44.160+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ING: 'date'
+[2025-10-07T12:58:44.169+0000] {logging_mixin.py:190} INFO - ING: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:58:48.784+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho ING
+[2025-10-07T12:58:48.786+0000] {logging_mixin.py:190} INFO - ℹ️ ING: Không có dữ liệu mới.
+[2025-10-07T12:58:48.786+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T12:58:48.889+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = INC
+[2025-10-07T12:58:48.896+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ INC: 'date'
+[2025-10-07T12:58:48.903+0000] {logging_mixin.py:190} INFO - INC: trích dữ liệu từ 2025-10-02 đến 2025-10-07
+[2025-10-07T12:58:53.594+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho INC
+[2025-10-07T12:58:53.596+0000] {logging_mixin.py:190} INFO - ℹ️ INC: Không có dữ liệu mới.
+[2025-10-07T12:58:53.596+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.0s...
+[2025-10-07T12:58:53.641+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IN4
+[2025-10-07T12:58:53.648+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IN4: 'date'
+[2025-10-07T12:58:53.654+0000] {logging_mixin.py:190} INFO - IN4: trích dữ liệu từ 2025-08-30 đến 2025-10-07
+[2025-10-07T12:58:58.311+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IN4
+[2025-10-07T12:58:58.313+0000] {logging_mixin.py:190} INFO - ℹ️ IN4: Không có dữ liệu mới.
+[2025-10-07T12:58:58.314+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IMP
+[2025-10-07T12:58:58.328+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IMP: 'date'
+[2025-10-07T12:58:58.335+0000] {logging_mixin.py:190} INFO - IMP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:58:58.575+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IMP
+[2025-10-07T12:58:58.586+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IMP.csv
+[2025-10-07T12:58:58.587+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IMP, thêm 2 dòng mới.
+[2025-10-07T12:59:00.588+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.3s...
+[2025-10-07T12:59:02.877+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IME
+[2025-10-07T12:59:02.885+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IME: 'date'
+[2025-10-07T12:59:02.891+0000] {logging_mixin.py:190} INFO - IME: trích dữ liệu từ 2025-09-04 đến 2025-10-07
+[2025-10-07T12:59:07.492+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IME
+[2025-10-07T12:59:07.495+0000] {logging_mixin.py:190} INFO - ℹ️ IME: Không có dữ liệu mới.
+[2025-10-07T12:59:07.496+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 36.7s...
+[2025-10-07T12:59:44.116+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ILS
+[2025-10-07T12:59:44.124+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ILS: 'date'
+[2025-10-07T12:59:44.132+0000] {logging_mixin.py:190} INFO - ILS: trích dữ liệu từ 2025-10-01 đến 2025-10-07
+[2025-10-07T12:59:44.373+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho ILS
+[2025-10-07T12:59:44.379+0000] {logging_mixin.py:190} INFO - Append 1 dòng mới vào /opt/***/data/lake/ILS.csv
+[2025-10-07T12:59:44.380+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ILS, thêm 1 dòng mới.
+[2025-10-07T12:59:46.381+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.5s...
+[2025-10-07T12:59:48.889+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ILC
+[2025-10-07T12:59:48.897+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ILC: 'date'
+[2025-10-07T12:59:48.903+0000] {logging_mixin.py:190} INFO - ILC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:59:49.142+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ILC
+[2025-10-07T12:59:49.148+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ILC.csv
+[2025-10-07T12:59:49.148+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ILC, thêm 2 dòng mới.
+[2025-10-07T12:59:51.150+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.5s...
+[2025-10-07T12:59:53.642+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ILB
+[2025-10-07T12:59:53.652+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ILB: 'date'
+[2025-10-07T12:59:53.658+0000] {logging_mixin.py:190} INFO - ILB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:59:53.901+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ILB
+[2025-10-07T12:59:53.910+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ILB.csv
+[2025-10-07T12:59:53.910+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ILB, thêm 2 dòng mới.
+[2025-10-07T12:59:55.911+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.4s...
+[2025-10-07T12:59:58.315+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ILA
+[2025-10-07T12:59:58.322+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ILA: 'date'
+[2025-10-07T12:59:58.329+0000] {logging_mixin.py:190} INFO - ILA: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T12:59:58.562+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ILA
+[2025-10-07T12:59:58.572+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ILA.csv
+[2025-10-07T12:59:58.573+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ILA, thêm 2 dòng mới.
+[2025-10-07T13:00:00.574+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.3s...
+[2025-10-07T13:00:02.838+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IJC
+[2025-10-07T13:00:02.846+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IJC: 'date'
+[2025-10-07T13:00:02.853+0000] {logging_mixin.py:190} INFO - IJC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:00:04.015+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IJC
+[2025-10-07T13:00:04.021+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IJC.csv
+[2025-10-07T13:00:04.021+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IJC, thêm 2 dòng mới.
+[2025-10-07T13:00:06.022+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 38.1s...
+[2025-10-07T13:00:44.035+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IHK
+[2025-10-07T13:00:44.045+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IHK: 'date'
+[2025-10-07T13:00:44.053+0000] {logging_mixin.py:190} INFO - IHK: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:00:44.261+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IHK
+[2025-10-07T13:00:44.269+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IHK.csv
+[2025-10-07T13:00:44.269+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IHK, thêm 2 dòng mới.
+[2025-10-07T13:00:46.270+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.6s...
+[2025-10-07T13:00:48.890+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IFS
+[2025-10-07T13:00:48.900+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IFS: 'date'
+[2025-10-07T13:00:48.908+0000] {logging_mixin.py:190} INFO - IFS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:00:49.249+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IFS
+[2025-10-07T13:00:49.255+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IFS.csv
+[2025-10-07T13:00:49.255+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IFS, thêm 2 dòng mới.
+[2025-10-07T13:00:51.256+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.4s...
+[2025-10-07T13:00:53.644+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IDV
+[2025-10-07T13:00:53.660+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IDV: 'date'
+[2025-10-07T13:00:53.667+0000] {logging_mixin.py:190} INFO - IDV: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:00:53.876+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IDV
+[2025-10-07T13:00:53.883+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IDV.csv
+[2025-10-07T13:00:53.884+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IDV, thêm 2 dòng mới.
+[2025-10-07T13:00:55.884+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.4s...
+[2025-10-07T13:00:58.315+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IDP
+[2025-10-07T13:00:58.330+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IDP: 'date'
+[2025-10-07T13:00:58.336+0000] {logging_mixin.py:190} INFO - IDP: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T13:01:02.866+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IDP
+[2025-10-07T13:01:02.867+0000] {logging_mixin.py:190} INFO - ℹ️ IDP: Không có dữ liệu mới.
+[2025-10-07T13:01:02.868+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IDJ
+[2025-10-07T13:01:02.874+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IDJ: 'date'
+[2025-10-07T13:01:02.882+0000] {logging_mixin.py:190} INFO - IDJ: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:01:03.094+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IDJ
+[2025-10-07T13:01:03.100+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IDJ.csv
+[2025-10-07T13:01:03.100+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IDJ, thêm 2 dòng mới.
+[2025-10-07T13:01:05.101+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 38.9s...
+[2025-10-07T13:01:43.995+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IDI
+[2025-10-07T13:01:44.002+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IDI: 'date'
+[2025-10-07T13:01:44.009+0000] {logging_mixin.py:190} INFO - IDI: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:01:44.232+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IDI
+[2025-10-07T13:01:44.239+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IDI.csv
+[2025-10-07T13:01:44.240+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IDI, thêm 2 dòng mới.
+[2025-10-07T13:01:46.241+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.6s...
+[2025-10-07T13:01:48.891+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IDC
+[2025-10-07T13:01:48.898+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IDC: 'date'
+[2025-10-07T13:01:48.905+0000] {logging_mixin.py:190} INFO - IDC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:01:49.107+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho IDC
+[2025-10-07T13:01:49.113+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/IDC.csv
+[2025-10-07T13:01:49.113+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất IDC, thêm 2 dòng mới.
+[2025-10-07T13:01:51.114+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.5s...
+[2025-10-07T13:01:53.645+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ICT
+[2025-10-07T13:01:53.653+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ICT: 'date'
+[2025-10-07T13:01:53.664+0000] {logging_mixin.py:190} INFO - ICT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:01:53.883+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ICT
+[2025-10-07T13:01:53.890+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ICT.csv
+[2025-10-07T13:01:53.891+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ICT, thêm 2 dòng mới.
+[2025-10-07T13:01:55.892+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.4s...
+[2025-10-07T13:01:58.317+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ICN
+[2025-10-07T13:01:58.324+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ICN: 'date'
+[2025-10-07T13:01:58.331+0000] {logging_mixin.py:190} INFO - ICN: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:01:58.600+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ICN
+[2025-10-07T13:01:58.609+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ICN.csv
+[2025-10-07T13:01:58.610+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ICN, thêm 2 dòng mới.
+[2025-10-07T13:02:00.611+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.3s...
+[2025-10-07T13:02:02.800+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ICI
+[2025-10-07T13:02:02.807+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ICI: 'date'
+[2025-10-07T13:02:02.814+0000] {logging_mixin.py:190} INFO - ICI: trích dữ liệu từ 2025-09-18 đến 2025-10-07
+[2025-10-07T13:02:08.423+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho ICI
+[2025-10-07T13:02:08.425+0000] {logging_mixin.py:190} INFO - ℹ️ ICI: Không có dữ liệu mới.
+[2025-10-07T13:02:08.426+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.6s...
+[2025-10-07T13:02:43.856+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ICG
+[2025-10-07T13:02:43.966+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ICG: 'date'
+[2025-10-07T13:02:43.988+0000] {logging_mixin.py:190} INFO - ICG: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T13:02:44.233+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ICG
+[2025-10-07T13:02:44.239+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ICG.csv
+[2025-10-07T13:02:44.239+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ICG, thêm 2 dòng mới.
+[2025-10-07T13:02:46.241+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.7s...
+[2025-10-07T13:02:48.893+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ICF
+[2025-10-07T13:02:48.906+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ICF: 'date'
+[2025-10-07T13:02:48.913+0000] {logging_mixin.py:190} INFO - ICF: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:02:49.173+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho ICF
+[2025-10-07T13:02:49.181+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/ICF.csv
+[2025-10-07T13:02:49.181+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ICF, thêm 2 dòng mới.
+[2025-10-07T13:02:51.182+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.5s...
+[2025-10-07T13:02:53.646+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = ICC
+[2025-10-07T13:02:53.655+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ ICC: 'date'
+[2025-10-07T13:02:53.664+0000] {logging_mixin.py:190} INFO - ICC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:02:54.951+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho ICC
+[2025-10-07T13:02:54.960+0000] {logging_mixin.py:190} INFO - Append 1 dòng mới vào /opt/***/data/lake/ICC.csv
+[2025-10-07T13:02:54.960+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất ICC, thêm 1 dòng mới.
+[2025-10-07T13:02:56.961+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.4s...
+[2025-10-07T13:02:58.318+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IBN
+[2025-10-07T13:02:58.329+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IBN: 'date'
+[2025-10-07T13:02:58.336+0000] {logging_mixin.py:190} INFO - IBN: trích dữ liệu từ 2022-07-29 đến 2025-10-07
+[2025-10-07T13:03:02.780+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IBN
+[2025-10-07T13:03:02.782+0000] {logging_mixin.py:190} INFO - ℹ️ IBN: Không có dữ liệu mới.
+[2025-10-07T13:03:02.783+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.0s...
+[2025-10-07T13:03:02.800+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IBD
+[2025-10-07T13:03:02.811+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IBD: 'date'
+[2025-10-07T13:03:02.818+0000] {logging_mixin.py:190} INFO - IBD: trích dữ liệu từ 2025-07-29 đến 2025-10-07
+[2025-10-07T13:03:07.590+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IBD
+[2025-10-07T13:03:07.591+0000] {logging_mixin.py:190} INFO - ℹ️ IBD: Không có dữ liệu mới.
+[2025-10-07T13:03:07.592+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 36.3s...
+[2025-10-07T13:03:43.772+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = IBC
+[2025-10-07T13:03:43.787+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ IBC: 'date'
+[2025-10-07T13:03:43.793+0000] {logging_mixin.py:190} INFO - IBC: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T13:03:48.451+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho IBC
+[2025-10-07T13:03:48.453+0000] {logging_mixin.py:190} INFO - ℹ️ IBC: Không có dữ liệu mới.
+[2025-10-07T13:03:48.454+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.4s...
+[2025-10-07T13:03:48.894+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HWS
+[2025-10-07T13:03:48.903+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HWS: 'date'
+[2025-10-07T13:03:48.911+0000] {logging_mixin.py:190} INFO - HWS: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:03:50.262+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HWS
+[2025-10-07T13:03:50.274+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HWS.csv
+[2025-10-07T13:03:50.274+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HWS, thêm 2 dòng mới.
+[2025-10-07T13:03:52.276+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.4s...
+[2025-10-07T13:03:53.648+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HVX
+[2025-10-07T13:03:53.655+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HVX: 'date'
+[2025-10-07T13:03:53.663+0000] {logging_mixin.py:190} INFO - HVX: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:03:53.935+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HVX
+[2025-10-07T13:03:53.943+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HVX.csv
+[2025-10-07T13:03:53.943+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HVX, thêm 2 dòng mới.
+[2025-10-07T13:03:55.944+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.4s...
+[2025-10-07T13:03:58.319+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HVT
+[2025-10-07T13:03:58.328+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HVT: 'date'
+[2025-10-07T13:03:58.337+0000] {logging_mixin.py:190} INFO - HVT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:03:58.544+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HVT
+[2025-10-07T13:03:58.551+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HVT.csv
+[2025-10-07T13:03:58.552+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HVT, thêm 2 dòng mới.
+[2025-10-07T13:04:00.457+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.3s...
+[2025-10-07T13:04:02.801+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HVN
+[2025-10-07T13:04:02.809+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HVN: 'date'
+[2025-10-07T13:04:02.817+0000] {logging_mixin.py:190} INFO - HVN: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:04:03.160+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HVN
+[2025-10-07T13:04:03.198+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HVN.csv
+[2025-10-07T13:04:03.199+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HVN, thêm 2 dòng mới.
+[2025-10-07T13:04:05.200+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 38.6s...
+[2025-10-07T13:04:43.624+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HVH
+[2025-10-07T13:04:43.631+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HVH: 'date'
+[2025-10-07T13:04:43.640+0000] {logging_mixin.py:190} INFO - HVH: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:04:43.812+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HVH
+[2025-10-07T13:04:43.818+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HVH.csv
+[2025-10-07T13:04:43.818+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HVH, thêm 2 dòng mới.
+[2025-10-07T13:04:45.819+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 3.1s...
+[2025-10-07T13:04:48.895+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HVG
+[2025-10-07T13:04:48.919+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HVG: 'date'
+[2025-10-07T13:04:48.926+0000] {logging_mixin.py:190} INFO - HVG: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T13:04:53.479+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HVG
+[2025-10-07T13:04:53.481+0000] {logging_mixin.py:190} INFO - ℹ️ HVG: Không có dữ liệu mới.
+[2025-10-07T13:04:53.482+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T13:04:53.648+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HVA
+[2025-10-07T13:04:53.670+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HVA: 'date'
+[2025-10-07T13:04:53.677+0000] {logging_mixin.py:190} INFO - HVA: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:04:53.901+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HVA
+[2025-10-07T13:04:53.907+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HVA.csv
+[2025-10-07T13:04:53.908+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HVA, thêm 2 dòng mới.
+[2025-10-07T13:04:55.909+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.4s...
+[2025-10-07T13:04:58.320+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HUX
+[2025-10-07T13:04:58.331+0000] {logging_mixin.py:190} INFO - HUX: trích dữ liệu từ 2020-01-01 đến 2025-10-07
+[2025-10-07T13:05:03.200+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HUX
+[2025-10-07T13:05:03.202+0000] {logging_mixin.py:190} INFO - ℹ️ HUX: Không có dữ liệu mới.
+[2025-10-07T13:05:03.202+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HUT
+[2025-10-07T13:05:03.209+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HUT: 'date'
+[2025-10-07T13:05:03.217+0000] {logging_mixin.py:190} INFO - HUT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:05:03.516+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HUT
+[2025-10-07T13:05:03.522+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HUT.csv
+[2025-10-07T13:05:03.523+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HUT, thêm 2 dòng mới.
+[2025-10-07T13:05:05.523+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 38.1s...
+[2025-10-07T13:05:43.535+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HUG
+[2025-10-07T13:05:43.545+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HUG: 'date'
+[2025-10-07T13:05:43.551+0000] {logging_mixin.py:190} INFO - HUG: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:05:48.569+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HUG
+[2025-10-07T13:05:48.573+0000] {logging_mixin.py:190} INFO - ℹ️ HUG: Không có dữ liệu mới.
+[2025-10-07T13:05:48.573+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.3s...
+[2025-10-07T13:05:48.896+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HUB
+[2025-10-07T13:05:48.903+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HUB: 'date'
+[2025-10-07T13:05:48.911+0000] {logging_mixin.py:190} INFO - HUB: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:05:49.045+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HUB
+[2025-10-07T13:05:49.054+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HUB.csv
+[2025-10-07T13:05:49.054+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HUB, thêm 2 dòng mới.
+[2025-10-07T13:05:51.056+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.6s...
+[2025-10-07T13:05:53.650+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HU6
+[2025-10-07T13:05:53.658+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HU6: 'date'
+[2025-10-07T13:05:53.664+0000] {logging_mixin.py:190} INFO - HU6: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:05:53.846+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho HU6
+[2025-10-07T13:05:53.854+0000] {logging_mixin.py:190} INFO - Append 1 dòng mới vào /opt/***/data/lake/HU6.csv
+[2025-10-07T13:05:53.854+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HU6, thêm 1 dòng mới.
+[2025-10-07T13:05:55.855+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.5s...
+[2025-10-07T13:05:58.320+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HU4
+[2025-10-07T13:05:58.327+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HU4: 'date'
+[2025-10-07T13:05:58.334+0000] {logging_mixin.py:190} INFO - HU4: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:05:58.480+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HU4
+[2025-10-07T13:05:58.488+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HU4.csv
+[2025-10-07T13:05:58.489+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HU4, thêm 2 dòng mới.
+[2025-10-07T13:06:00.364+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.8s...
+[2025-10-07T13:06:03.203+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HU3
+[2025-10-07T13:06:03.210+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HU3: 'date'
+[2025-10-07T13:06:03.217+0000] {logging_mixin.py:190} INFO - HU3: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:06:03.431+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HU3
+[2025-10-07T13:06:03.437+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HU3.csv
+[2025-10-07T13:06:03.438+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HU3, thêm 2 dòng mới.
+[2025-10-07T13:06:05.438+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 38.1s...
+[2025-10-07T13:06:43.413+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HU1
+[2025-10-07T13:06:43.421+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HU1: 'date'
+[2025-10-07T13:06:43.427+0000] {logging_mixin.py:190} INFO - HU1: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:06:43.666+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HU1
+[2025-10-07T13:06:43.673+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HU1.csv
+[2025-10-07T13:06:43.674+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HU1, thêm 2 dòng mới.
+[2025-10-07T13:06:45.675+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 3.2s...
+[2025-10-07T13:06:48.897+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HTW
+[2025-10-07T13:06:48.911+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HTW: 'date'
+[2025-10-07T13:06:48.917+0000] {logging_mixin.py:190} INFO - HTW: trích dữ liệu từ 2022-07-29 đến 2025-10-07
+[2025-10-07T13:06:53.580+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HTW
+[2025-10-07T13:06:53.581+0000] {logging_mixin.py:190} INFO - ℹ️ HTW: Không có dữ liệu mới.
+[2025-10-07T13:06:53.582+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T13:06:53.651+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HTV
+[2025-10-07T13:06:53.658+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HTV: 'date'
+[2025-10-07T13:06:53.665+0000] {logging_mixin.py:190} INFO - HTV: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T13:06:53.853+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho HTV
+[2025-10-07T13:06:53.859+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/HTV.csv
+[2025-10-07T13:06:53.859+0000] {logging_mixin.py:190} INFO - ✅ Hoàn tất HTV, thêm 2 dòng mới.
+[2025-10-07T13:06:55.860+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 2.5s...
+[2025-10-07T13:06:58.321+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HTT
+[2025-10-07T13:06:58.327+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HTT: 'date'
+[2025-10-07T13:06:58.333+0000] {logging_mixin.py:190} INFO - HTT: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:07:02.781+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HTT
+[2025-10-07T13:07:02.782+0000] {logging_mixin.py:190} INFO - ℹ️ HTT: Không có dữ liệu mới.
+[2025-10-07T13:07:02.782+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.4s...
+[2025-10-07T13:07:03.204+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = HTR
+[2025-10-07T13:07:03.210+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ HTR: 'date'
+[2025-10-07T13:07:03.216+0000] {logging_mixin.py:190} INFO - HTR: trích dữ liệu từ 2023-08-03 đến 2025-10-07
+[2025-10-07T13:07:07.805+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho HTR
+[2025-10-07T13:07:07.807+0000] {logging_mixin.py:190} INFO - ℹ️ HTR: Không có dữ liệu mới.
+[2025-10-07T13:07:07.807+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T13:07:07.818+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T13:07:07.818+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:43:54.222487+00:00, map_index=20, execution_date=20251007T104354, start_date=20251007T125743, end_date=20251007T130707
+[2025-10-07T13:07:07.898+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T13:07:08.051+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T13:07:08.061+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

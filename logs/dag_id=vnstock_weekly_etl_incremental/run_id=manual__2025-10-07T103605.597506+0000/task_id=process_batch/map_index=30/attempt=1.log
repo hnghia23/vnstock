@@ -1,0 +1,84 @@
+[2025-10-07T10:36:58.684+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T10:36:58.709+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:36:05.597506+00:00 map_index=30 [queued]>
+[2025-10-07T10:36:58.723+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:36:05.597506+00:00 map_index=30 [queued]>
+[2025-10-07T10:36:58.724+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T10:36:58.741+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:36:05.597506+00:00
+[2025-10-07T10:36:58.752+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3104) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T10:36:58.754+0000] {standard_task_runner.py:72} INFO - Started process 3121 to run task
+[2025-10-07T10:36:58.755+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:36:05.597506+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpgzggte82', '--map-index', '30']
+[2025-10-07T10:36:58.756+0000] {standard_task_runner.py:105} INFO - Job 113: Subtask process_batch
+[2025-10-07T10:36:58.770+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T10:36:59.050+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:36:05.597506+00:00 map_index=30 [running]> on host e3278e0f0bbc
+[2025-10-07T10:36:59.138+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:36:05.597506+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:36:05.597506+00:00'
+[2025-10-07T10:36:59.139+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T10:36:59.142+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = CEG
+[2025-10-07T10:36:59.167+0000] {logging_mixin.py:190} INFO - CEG: trích dữ liệu từ 2025-02-15 đến 2025-10-07
+[2025-10-07T10:37:03.924+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CEG
+[2025-10-07T10:37:03.926+0000] {logging_mixin.py:190} INFO - Không có dữ liệu mới cho CEG
+[2025-10-07T10:37:05.926+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = CEE
+[2025-10-07T10:37:05.947+0000] {logging_mixin.py:190} INFO - CEE: trích dữ liệu từ 2022-07-22 đến 2025-10-07
+[2025-10-07T10:37:10.539+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CEE
+[2025-10-07T10:37:10.540+0000] {logging_mixin.py:190} INFO - Không có dữ liệu mới cho CEE
+[2025-10-07T10:37:12.541+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = CE1
+[2025-10-07T10:37:12.562+0000] {logging_mixin.py:190} INFO - CE1: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T10:37:17.148+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho CE1
+[2025-10-07T10:37:17.149+0000] {logging_mixin.py:190} INFO - Không có dữ liệu mới cho CE1
+[2025-10-07T10:37:19.150+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = CDR
+[2025-10-07T10:37:19.183+0000] {logging_mixin.py:190} INFO - CDR: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:37:19.421+0000] {logging_mixin.py:190} INFO - Trích xuất 2 dòng mới cho CDR
+[2025-10-07T10:37:19.431+0000] {logging_mixin.py:190} INFO - Append 2 dòng mới vào /opt/***/data/lake/CDR.csv
+[2025-10-07T10:37:23.945+0000] {logging_mixin.py:190} INFO - ⬇️ Xử lý symbol = CDP
+[2025-10-07T10:37:23.969+0000] {logging_mixin.py:190} INFO - CDP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T10:37:24.212+0000] {logging_mixin.py:190} INFO - Trích xuất 1 dòng mới cho CDP
+[2025-10-07T10:37:24.222+0000] {logging_mixin.py:190} INFO - Append 1 dòng mới vào /opt/***/data/lake/CDP.csv
+[2025-10-07T10:37:26.223+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDO: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.223+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDN: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.224+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDH: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.224+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.225+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CDC: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.226+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCV: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.227+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.228+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCR: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.228+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCP: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.229+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCM: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.229+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCL: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.229+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCI: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.230+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCC: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.230+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CCA: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.230+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CC4: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.231+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CC1: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.231+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CBS: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.231+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CBI: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.232+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAV: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.232+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.232+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAR: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.233+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAP: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.233+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAN: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.234+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.234+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAD: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.235+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý CAB: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.235+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C92: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.235+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C69: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.236+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C4G: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.236+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C47: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.236+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C32: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.237+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C22: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.237+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C21: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.237+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý C12: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.238+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BXT: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.238+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BXH: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.238+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BWS: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.239+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BWE: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.239+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BWA: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.239+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVS: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.240+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVN: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.240+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVL: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.241+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVH: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.241+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVG: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.242+0000] {logging_mixin.py:190} INFO - ⚠️ Lỗi khi xử lý BVB: Bucket for item=vnstock with Rate limit=5/1.0m is already full
+[2025-10-07T10:37:26.242+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T10:37:26.251+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T10:37:26.252+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:36:05.597506+00:00, map_index=30, execution_date=20251007T103605, start_date=20251007T103658, end_date=20251007T103726
+[2025-10-07T10:37:26.371+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T10:37:26.387+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T10:37:26.393+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

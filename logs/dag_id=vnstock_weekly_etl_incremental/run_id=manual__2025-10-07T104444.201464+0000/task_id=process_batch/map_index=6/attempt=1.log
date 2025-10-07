@@ -1,0 +1,302 @@
+[2025-10-07T13:35:57.250+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-07T13:35:57.270+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:44:44.201464+00:00 map_index=6 [queued]>
+[2025-10-07T13:35:57.280+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:44:44.201464+00:00 map_index=6 [queued]>
+[2025-10-07T13:35:57.280+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-10-07T13:35:57.290+0000] {taskinstance.py:2890} INFO - Executing <Mapped(_PythonDecoratedOperator): process_batch> on 2025-10-07 10:44:44.201464+00:00
+[2025-10-07T13:35:57.302+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=18419) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-07T13:35:57.303+0000] {standard_task_runner.py:72} INFO - Started process 18440 to run task
+[2025-10-07T13:35:57.303+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'vnstock_weekly_etl_incremental', 'process_batch', 'manual__2025-10-07T10:44:44.201464+00:00', '--job-id', '200', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfmbrq0sy', '--map-index', '6']
+[2025-10-07T13:35:57.306+0000] {standard_task_runner.py:105} INFO - Job 200: Subtask process_batch
+[2025-10-07T13:35:57.319+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-07T13:35:57.360+0000] {task_command.py:467} INFO - Running <TaskInstance: vnstock_weekly_etl_incremental.process_batch manual__2025-10-07T10:44:44.201464+00:00 map_index=6 [running]> on host e3278e0f0bbc
+[2025-10-07T13:35:57.603+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vnstock_weekly_etl_incremental' AIRFLOW_CTX_TASK_ID='process_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T10:44:44.201464+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T10:44:44.201464+00:00'
+[2025-10-07T13:35:57.604+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-10-07T13:35:57.607+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TLI
+[2025-10-07T13:35:57.616+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TLI: 'date'
+[2025-10-07T13:35:57.624+0000] {logging_mixin.py:190} INFO - TLI: trích dữ liệu từ 2025-10-07 đến 2025-10-07
+[2025-10-07T13:36:02.175+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TLI
+[2025-10-07T13:36:02.177+0000] {logging_mixin.py:190} INFO - ℹ️ TLI: Không có dữ liệu mới.
+[2025-10-07T13:36:02.177+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TLH
+[2025-10-07T13:36:02.185+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TLH: 'date'
+[2025-10-07T13:36:02.191+0000] {logging_mixin.py:190} INFO - TLH: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:36:06.767+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TLH
+[2025-10-07T13:36:06.769+0000] {logging_mixin.py:190} INFO - ℹ️ TLH: Không có dữ liệu mới.
+[2025-10-07T13:36:06.769+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TLG
+[2025-10-07T13:36:06.777+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TLG: 'date'
+[2025-10-07T13:36:06.783+0000] {logging_mixin.py:190} INFO - TLG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:36:11.331+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TLG
+[2025-10-07T13:36:11.333+0000] {logging_mixin.py:190} INFO - ℹ️ TLG: Không có dữ liệu mới.
+[2025-10-07T13:36:11.333+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TLD
+[2025-10-07T13:36:11.340+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TLD: 'date'
+[2025-10-07T13:36:11.347+0000] {logging_mixin.py:190} INFO - TLD: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:36:16.909+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TLD
+[2025-10-07T13:36:16.910+0000] {logging_mixin.py:190} INFO - ℹ️ TLD: Không có dữ liệu mới.
+[2025-10-07T13:36:16.911+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TL4
+[2025-10-07T13:36:16.924+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TL4: 'date'
+[2025-10-07T13:36:16.931+0000] {logging_mixin.py:190} INFO - TL4: trích dữ liệu từ 2025-09-27 đến 2025-10-07
+[2025-10-07T13:36:21.909+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TL4
+[2025-10-07T13:36:21.911+0000] {logging_mixin.py:190} INFO - ℹ️ TL4: Không có dữ liệu mới.
+[2025-10-07T13:36:21.912+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.7s...
+[2025-10-07T13:36:57.302+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TKU
+[2025-10-07T13:36:57.317+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TKU: 'date'
+[2025-10-07T13:36:57.324+0000] {logging_mixin.py:190} INFO - TKU: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:37:01.983+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TKU
+[2025-10-07T13:37:01.985+0000] {logging_mixin.py:190} INFO - ℹ️ TKU: Không có dữ liệu mới.
+[2025-10-07T13:37:01.985+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T13:37:02.178+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TKG
+[2025-10-07T13:37:02.186+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TKG: 'date'
+[2025-10-07T13:37:02.192+0000] {logging_mixin.py:190} INFO - TKG: trích dữ liệu từ 2024-08-24 đến 2025-10-07
+[2025-10-07T13:37:06.984+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TKG
+[2025-10-07T13:37:06.985+0000] {logging_mixin.py:190} INFO - ℹ️ TKG: Không có dữ liệu mới.
+[2025-10-07T13:37:06.986+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TKC
+[2025-10-07T13:37:06.991+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TKC: 'date'
+[2025-10-07T13:37:06.997+0000] {logging_mixin.py:190} INFO - TKC: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T13:37:11.660+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TKC
+[2025-10-07T13:37:11.661+0000] {logging_mixin.py:190} INFO - ℹ️ TKC: Không có dữ liệu mới.
+[2025-10-07T13:37:11.662+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TKA
+[2025-10-07T13:37:11.677+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TKA: 'date'
+[2025-10-07T13:37:11.683+0000] {logging_mixin.py:190} INFO - TKA: trích dữ liệu từ 2024-10-22 đến 2025-10-07
+[2025-10-07T13:37:16.409+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TKA
+[2025-10-07T13:37:16.411+0000] {logging_mixin.py:190} INFO - ℹ️ TKA: Không có dữ liệu mới.
+[2025-10-07T13:37:16.411+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.5s...
+[2025-10-07T13:37:16.911+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TJC
+[2025-10-07T13:37:16.919+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TJC: 'date'
+[2025-10-07T13:37:16.925+0000] {logging_mixin.py:190} INFO - TJC: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:37:22.416+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TJC
+[2025-10-07T13:37:22.418+0000] {logging_mixin.py:190} INFO - ℹ️ TJC: Không có dữ liệu mới.
+[2025-10-07T13:37:22.418+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.9s...
+[2025-10-07T13:37:57.151+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TIX
+[2025-10-07T13:37:57.160+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TIX: 'date'
+[2025-10-07T13:37:57.167+0000] {logging_mixin.py:190} INFO - TIX: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:38:01.915+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TIX
+[2025-10-07T13:38:01.917+0000] {logging_mixin.py:190} INFO - ℹ️ TIX: Không có dữ liệu mới.
+[2025-10-07T13:38:01.918+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.3s...
+[2025-10-07T13:38:02.179+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TIS
+[2025-10-07T13:38:02.194+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TIS: 'date'
+[2025-10-07T13:38:02.202+0000] {logging_mixin.py:190} INFO - TIS: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:38:07.009+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TIS
+[2025-10-07T13:38:07.010+0000] {logging_mixin.py:190} INFO - ℹ️ TIS: Không có dữ liệu mới.
+[2025-10-07T13:38:07.011+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TIP
+[2025-10-07T13:38:07.018+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TIP: 'date'
+[2025-10-07T13:38:07.025+0000] {logging_mixin.py:190} INFO - TIP: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:38:11.696+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TIP
+[2025-10-07T13:38:11.697+0000] {logging_mixin.py:190} INFO - ℹ️ TIP: Không có dữ liệu mới.
+[2025-10-07T13:38:11.697+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TIN
+[2025-10-07T13:38:11.703+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TIN: 'date'
+[2025-10-07T13:38:11.708+0000] {logging_mixin.py:190} INFO - TIN: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:38:16.325+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TIN
+[2025-10-07T13:38:16.326+0000] {logging_mixin.py:190} INFO - ℹ️ TIN: Không có dữ liệu mới.
+[2025-10-07T13:38:16.327+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.6s...
+[2025-10-07T13:38:16.913+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TIG
+[2025-10-07T13:38:16.929+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TIG: 'date'
+[2025-10-07T13:38:16.935+0000] {logging_mixin.py:190} INFO - TIG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:38:21.415+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TIG
+[2025-10-07T13:38:21.417+0000] {logging_mixin.py:190} INFO - ℹ️ TIG: Không có dữ liệu mới.
+[2025-10-07T13:38:21.417+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 35.7s...
+[2025-10-07T13:38:57.001+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TIE
+[2025-10-07T13:38:57.016+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TIE: 'date'
+[2025-10-07T13:38:57.023+0000] {logging_mixin.py:190} INFO - TIE: trích dữ liệu từ 2025-10-07 đến 2025-10-07
+[2025-10-07T13:39:01.710+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TIE
+[2025-10-07T13:39:01.712+0000] {logging_mixin.py:190} INFO - ℹ️ TIE: Không có dữ liệu mới.
+[2025-10-07T13:39:01.713+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.5s...
+[2025-10-07T13:39:02.180+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TID
+[2025-10-07T13:39:02.197+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TID: 'date'
+[2025-10-07T13:39:02.206+0000] {logging_mixin.py:190} INFO - TID: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:39:06.818+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TID
+[2025-10-07T13:39:06.819+0000] {logging_mixin.py:190} INFO - ℹ️ TID: Không có dữ liệu mới.
+[2025-10-07T13:39:06.820+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T13:39:07.012+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THW
+[2025-10-07T13:39:07.022+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THW: 'date'
+[2025-10-07T13:39:07.029+0000] {logging_mixin.py:190} INFO - THW: trích dữ liệu từ 2025-09-20 đến 2025-10-07
+[2025-10-07T13:39:12.914+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THW
+[2025-10-07T13:39:12.916+0000] {logging_mixin.py:190} INFO - ℹ️ THW: Không có dữ liệu mới.
+[2025-10-07T13:39:12.916+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THU
+[2025-10-07T13:39:12.923+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THU: 'date'
+[2025-10-07T13:39:12.930+0000] {logging_mixin.py:190} INFO - THU: trích dữ liệu từ 2025-09-26 đến 2025-10-07
+[2025-10-07T13:39:17.599+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THU
+[2025-10-07T13:39:17.601+0000] {logging_mixin.py:190} INFO - ℹ️ THU: Không có dữ liệu mới.
+[2025-10-07T13:39:17.602+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THT
+[2025-10-07T13:39:17.616+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THT: 'date'
+[2025-10-07T13:39:17.622+0000] {logging_mixin.py:190} INFO - THT: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:39:22.160+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THT
+[2025-10-07T13:39:22.162+0000] {logging_mixin.py:190} INFO - ℹ️ THT: Không có dữ liệu mới.
+[2025-10-07T13:39:22.163+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.8s...
+[2025-10-07T13:39:56.861+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THS
+[2025-10-07T13:39:56.881+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THS: 'date'
+[2025-10-07T13:39:56.890+0000] {logging_mixin.py:190} INFO - THS: trích dữ liệu từ 2025-08-23 đến 2025-10-07
+[2025-10-07T13:40:02.502+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THS
+[2025-10-07T13:40:02.503+0000] {logging_mixin.py:190} INFO - ℹ️ THS: Không có dữ liệu mới.
+[2025-10-07T13:40:02.504+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THP
+[2025-10-07T13:40:02.520+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THP: 'date'
+[2025-10-07T13:40:02.527+0000] {logging_mixin.py:190} INFO - THP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:40:07.282+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THP
+[2025-10-07T13:40:07.284+0000] {logging_mixin.py:190} INFO - ℹ️ THP: Không có dữ liệu mới.
+[2025-10-07T13:40:07.285+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THN
+[2025-10-07T13:40:07.304+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THN: 'date'
+[2025-10-07T13:40:07.311+0000] {logging_mixin.py:190} INFO - THN: trích dữ liệu từ 2025-08-19 đến 2025-10-07
+[2025-10-07T13:40:11.955+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THN
+[2025-10-07T13:40:11.957+0000] {logging_mixin.py:190} INFO - ℹ️ THN: Không có dữ liệu mới.
+[2025-10-07T13:40:11.957+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.0s...
+[2025-10-07T13:40:12.918+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THM
+[2025-10-07T13:40:12.943+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THM: 'date'
+[2025-10-07T13:40:12.950+0000] {logging_mixin.py:190} INFO - THM: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:40:17.741+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THM
+[2025-10-07T13:40:17.743+0000] {logging_mixin.py:190} INFO - ℹ️ THM: Không có dữ liệu mới.
+[2025-10-07T13:40:17.743+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THI
+[2025-10-07T13:40:17.759+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THI: 'date'
+[2025-10-07T13:40:17.764+0000] {logging_mixin.py:190} INFO - THI: trích dữ liệu từ 2023-06-29 đến 2025-10-07
+[2025-10-07T13:40:22.696+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THI
+[2025-10-07T13:40:22.698+0000] {logging_mixin.py:190} INFO - ℹ️ THI: Không có dữ liệu mới.
+[2025-10-07T13:40:22.699+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 34.2s...
+[2025-10-07T13:40:56.713+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THG
+[2025-10-07T13:40:56.735+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THG: 'date'
+[2025-10-07T13:40:56.743+0000] {logging_mixin.py:190} INFO - THG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:41:01.384+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THG
+[2025-10-07T13:41:01.386+0000] {logging_mixin.py:190} INFO - ℹ️ THG: Không có dữ liệu mới.
+[2025-10-07T13:41:01.386+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.1s...
+[2025-10-07T13:41:02.505+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THD
+[2025-10-07T13:41:02.521+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THD: 'date'
+[2025-10-07T13:41:02.529+0000] {logging_mixin.py:190} INFO - THD: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:41:07.147+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THD
+[2025-10-07T13:41:07.149+0000] {logging_mixin.py:190} INFO - ℹ️ THD: Không có dữ liệu mới.
+[2025-10-07T13:41:07.149+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.1s...
+[2025-10-07T13:41:07.286+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = THB
+[2025-10-07T13:41:07.305+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ THB: 'date'
+[2025-10-07T13:41:07.312+0000] {logging_mixin.py:190} INFO - THB: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:41:12.052+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho THB
+[2025-10-07T13:41:12.054+0000] {logging_mixin.py:190} INFO - ℹ️ THB: Không có dữ liệu mới.
+[2025-10-07T13:41:12.054+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T13:41:12.921+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TH1
+[2025-10-07T13:41:12.954+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TH1: 'date'
+[2025-10-07T13:41:12.962+0000] {logging_mixin.py:190} INFO - TH1: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:41:18.549+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TH1
+[2025-10-07T13:41:18.550+0000] {logging_mixin.py:190} INFO - ℹ️ TH1: Không có dữ liệu mới.
+[2025-10-07T13:41:18.550+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TGP
+[2025-10-07T13:41:18.565+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TGP: 'date'
+[2025-10-07T13:41:18.572+0000] {logging_mixin.py:190} INFO - TGP: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:41:22.923+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TGP
+[2025-10-07T13:41:22.924+0000] {logging_mixin.py:190} INFO - ℹ️ TGP: Không có dữ liệu mới.
+[2025-10-07T13:41:22.925+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 33.8s...
+[2025-10-07T13:41:56.559+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TGG
+[2025-10-07T13:41:56.593+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TGG: 'date'
+[2025-10-07T13:41:56.601+0000] {logging_mixin.py:190} INFO - TGG: trích dữ liệu từ 2024-07-26 đến 2025-10-07
+[2025-10-07T13:42:01.270+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TGG
+[2025-10-07T13:42:01.272+0000] {logging_mixin.py:190} INFO - ℹ️ TGG: Không có dữ liệu mới.
+[2025-10-07T13:42:01.272+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.2s...
+[2025-10-07T13:42:02.505+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TFC
+[2025-10-07T13:42:02.525+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TFC: 'date'
+[2025-10-07T13:42:02.533+0000] {logging_mixin.py:190} INFO - TFC: trích dữ liệu từ 2025-10-07 đến 2025-10-07
+[2025-10-07T13:42:07.330+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TFC
+[2025-10-07T13:42:07.331+0000] {logging_mixin.py:190} INFO - ℹ️ TFC: Không có dữ liệu mới.
+[2025-10-07T13:42:07.332+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TET
+[2025-10-07T13:42:07.350+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TET: 'date'
+[2025-10-07T13:42:07.357+0000] {logging_mixin.py:190} INFO - TET: trích dữ liệu từ 2025-09-19 đến 2025-10-07
+[2025-10-07T13:42:12.976+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TET
+[2025-10-07T13:42:12.977+0000] {logging_mixin.py:190} INFO - ℹ️ TET: Không có dữ liệu mới.
+[2025-10-07T13:42:12.977+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TEL
+[2025-10-07T13:42:13.010+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TEL: 'date'
+[2025-10-07T13:42:13.017+0000] {logging_mixin.py:190} INFO - TEL: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:42:17.727+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TEL
+[2025-10-07T13:42:17.740+0000] {logging_mixin.py:190} INFO - ℹ️ TEL: Không có dữ liệu mới.
+[2025-10-07T13:42:17.741+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.8s...
+[2025-10-07T13:42:18.553+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TEG
+[2025-10-07T13:42:18.579+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TEG: 'date'
+[2025-10-07T13:42:18.588+0000] {logging_mixin.py:190} INFO - TEG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:42:23.019+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TEG
+[2025-10-07T13:42:23.021+0000] {logging_mixin.py:190} INFO - ℹ️ TEG: Không có dữ liệu mới.
+[2025-10-07T13:42:23.022+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 33.5s...
+[2025-10-07T13:42:56.414+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TED
+[2025-10-07T13:42:56.431+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TED: 'date'
+[2025-10-07T13:42:56.439+0000] {logging_mixin.py:190} INFO - TED: trích dữ liệu từ 2025-10-04 đến 2025-10-07
+[2025-10-07T13:43:01.371+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TED
+[2025-10-07T13:43:01.373+0000] {logging_mixin.py:190} INFO - ℹ️ TED: Không có dữ liệu mới.
+[2025-10-07T13:43:01.373+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.1s...
+[2025-10-07T13:43:02.506+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TEC
+[2025-10-07T13:43:02.523+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TEC: 'date'
+[2025-10-07T13:43:02.529+0000] {logging_mixin.py:190} INFO - TEC: trích dữ liệu từ 2022-07-09 đến 2025-10-07
+[2025-10-07T13:43:07.006+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TEC
+[2025-10-07T13:43:07.008+0000] {logging_mixin.py:190} INFO - ℹ️ TEC: Không có dữ liệu mới.
+[2025-10-07T13:43:07.008+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.3s...
+[2025-10-07T13:43:07.333+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDW
+[2025-10-07T13:43:07.350+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDW: 'date'
+[2025-10-07T13:43:07.357+0000] {logging_mixin.py:190} INFO - TDW: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:43:12.316+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDW
+[2025-10-07T13:43:12.318+0000] {logging_mixin.py:190} INFO - ℹ️ TDW: Không có dữ liệu mới.
+[2025-10-07T13:43:12.319+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.7s...
+[2025-10-07T13:43:12.980+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDT
+[2025-10-07T13:43:12.999+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDT: 'date'
+[2025-10-07T13:43:13.007+0000] {logging_mixin.py:190} INFO - TDT: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:43:17.638+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDT
+[2025-10-07T13:43:17.640+0000] {logging_mixin.py:190} INFO - ℹ️ TDT: Không có dữ liệu mới.
+[2025-10-07T13:43:17.640+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T13:43:18.556+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDS
+[2025-10-07T13:43:18.584+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDS: 'date'
+[2025-10-07T13:43:18.591+0000] {logging_mixin.py:190} INFO - TDS: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:43:23.114+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDS
+[2025-10-07T13:43:23.115+0000] {logging_mixin.py:190} INFO - ℹ️ TDS: Không có dữ liệu mới.
+[2025-10-07T13:43:23.115+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 33.3s...
+[2025-10-07T13:43:56.261+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDP
+[2025-10-07T13:43:56.285+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDP: 'date'
+[2025-10-07T13:43:56.294+0000] {logging_mixin.py:190} INFO - TDP: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:44:01.211+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDP
+[2025-10-07T13:44:01.212+0000] {logging_mixin.py:190} INFO - ℹ️ TDP: Không có dữ liệu mới.
+[2025-10-07T13:44:01.213+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.3s...
+[2025-10-07T13:44:02.507+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDN
+[2025-10-07T13:44:02.526+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDN: 'date'
+[2025-10-07T13:44:02.533+0000] {logging_mixin.py:190} INFO - TDN: trích dữ liệu từ 2024-06-25 đến 2025-10-07
+[2025-10-07T13:44:06.968+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDN
+[2025-10-07T13:44:06.969+0000] {logging_mixin.py:190} INFO - ℹ️ TDN: Không có dữ liệu mới.
+[2025-10-07T13:44:06.970+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.4s...
+[2025-10-07T13:44:07.333+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDM
+[2025-10-07T13:44:07.351+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDM: 'date'
+[2025-10-07T13:44:07.358+0000] {logging_mixin.py:190} INFO - TDM: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:44:11.930+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDM
+[2025-10-07T13:44:11.932+0000] {logging_mixin.py:190} INFO - ℹ️ TDM: Không có dữ liệu mới.
+[2025-10-07T13:44:11.932+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.0s...
+[2025-10-07T13:44:12.980+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDI
+[2025-10-07T13:44:12.993+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDI: 'date'
+[2025-10-07T13:44:12.999+0000] {logging_mixin.py:190} INFO - TDI: trích dữ liệu từ 2023-05-16 đến 2025-10-07
+[2025-10-07T13:44:17.552+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDI
+[2025-10-07T13:44:17.554+0000] {logging_mixin.py:190} INFO - ℹ️ TDI: Không có dữ liệu mới.
+[2025-10-07T13:44:17.555+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.0s...
+[2025-10-07T13:44:18.557+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDH
+[2025-10-07T13:44:18.585+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDH: 'date'
+[2025-10-07T13:44:18.594+0000] {logging_mixin.py:190} INFO - TDH: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:44:22.947+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDH
+[2025-10-07T13:44:22.948+0000] {logging_mixin.py:190} INFO - ℹ️ TDH: Không có dữ liệu mới.
+[2025-10-07T13:44:22.948+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 33.3s...
+[2025-10-07T13:44:56.117+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDG
+[2025-10-07T13:44:56.136+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDG: 'date'
+[2025-10-07T13:44:56.146+0000] {logging_mixin.py:190} INFO - TDG: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:45:00.769+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDG
+[2025-10-07T13:45:00.771+0000] {logging_mixin.py:190} INFO - ℹ️ TDG: Không có dữ liệu mới.
+[2025-10-07T13:45:00.771+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.7s...
+[2025-10-07T13:45:02.508+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDF
+[2025-10-07T13:45:02.538+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDF: 'date'
+[2025-10-07T13:45:02.545+0000] {logging_mixin.py:190} INFO - TDF: trích dữ liệu từ 2025-10-03 đến 2025-10-07
+[2025-10-07T13:45:07.099+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDF
+[2025-10-07T13:45:07.100+0000] {logging_mixin.py:190} INFO - ℹ️ TDF: Không có dữ liệu mới.
+[2025-10-07T13:45:07.101+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.2s...
+[2025-10-07T13:45:07.334+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDC
+[2025-10-07T13:45:07.352+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDC: 'date'
+[2025-10-07T13:45:07.362+0000] {logging_mixin.py:190} INFO - TDC: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:45:12.086+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDC
+[2025-10-07T13:45:12.087+0000] {logging_mixin.py:190} INFO - ℹ️ TDC: Không có dữ liệu mới.
+[2025-10-07T13:45:12.088+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 0.9s...
+[2025-10-07T13:45:12.981+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TDB
+[2025-10-07T13:45:13.003+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TDB: 'date'
+[2025-10-07T13:45:13.011+0000] {logging_mixin.py:190} INFO - TDB: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:45:17.602+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TDB
+[2025-10-07T13:45:17.604+0000] {logging_mixin.py:190} INFO - ℹ️ TDB: Không có dữ liệu mới.
+[2025-10-07T13:45:17.605+0000] {logging_mixin.py:190} INFO - 🚦 Giới hạn API đạt mức tối đa, chờ 1.0s...
+[2025-10-07T13:45:18.558+0000] {logging_mixin.py:190} INFO - ⬇️ Bắt đầu xử lý symbol = TD6
+[2025-10-07T13:45:18.575+0000] {logging_mixin.py:190} INFO - ⚠️ Không đọc được file cũ TD6: 'date'
+[2025-10-07T13:45:18.583+0000] {logging_mixin.py:190} INFO - TD6: trích dữ liệu từ 2025-10-08 đến 2025-10-07
+[2025-10-07T13:45:23.024+0000] {logging_mixin.py:190} INFO - Không tìm thấy dữ liệu cho TD6
+[2025-10-07T13:45:23.025+0000] {logging_mixin.py:190} INFO - ℹ️ TD6: Không có dữ liệu mới.
+[2025-10-07T13:45:23.025+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-10-07T13:45:23.036+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-10-07T13:45:23.037+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=vnstock_weekly_etl_incremental, task_id=process_batch, run_id=manual__2025-10-07T10:44:44.201464+00:00, map_index=6, execution_date=20251007T104444, start_date=20251007T133557, end_date=20251007T134523
+[2025-10-07T13:45:23.084+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-07T13:45:23.232+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T13:45:23.234+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
