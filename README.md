@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #  Stock Data Pipeline — VnStock ETL & Streaming
 
 ## Giới thiệu
@@ -155,3 +156,6 @@ vnstock/
 - [ **TA-Lib Indicators**](https://ta-lib.github.io/ta-lib-python/)
 
 
+=======
+vnstock API
+>>>>>>> 455e53549ed726d537b8626181d2e970234bc484
