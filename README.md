@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #  Stock Data Pipeline — VnStock ETL & Streaming
 
 ## Giới thiệu
