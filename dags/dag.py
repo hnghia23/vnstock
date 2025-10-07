@@ -11,7 +11,7 @@ sys.path.append("/opt/airflow/src")
 from batch.etl_vnstock import extract_data, transform_data, load_data
 
 
-# === Simple Rate Limiter (thay pyrate-limiter) ===
+# ===Rate Limiter==
 class SimpleRateLimiter:
     """Giới hạn số lượng request trong mỗi khoảng thời gian."""
     def __init__(self, max_calls: int, period: int):
@@ -26,13 +26,13 @@ class SimpleRateLimiter:
 
         if len(self.calls) >= self.max_calls:
             sleep_time = self.period - (now - self.calls[0])
-            print(f"🚦 Giới hạn API đạt mức tối đa, chờ {sleep_time:.1f}s...")
+            print(f"Giới hạn API đạt mức tối đa, chờ {sleep_time:.1f}s...")
             time.sleep(sleep_time)
 
         self.calls.append(time.time())
 
 
-# === Thông tin cấu hình chung ===
+# === Cấu hình chung ===
 DATA_DIR = "/opt/airflow/data"
 SYMBOL_FILE = os.path.join(DATA_DIR, "symbol.csv")
 OUTPUT_DIR = os.path.join(DATA_DIR, "lake")
@@ -47,12 +47,13 @@ default_args = {
 }
 
 
-# === DAG định nghĩa ===
+# === DAG ===
+
 with DAG(
     dag_id="vnstock_weekly_etl_incremental",
     default_args=default_args,
     start_date=days_ago(1),
-    schedule_interval="0 7 * * MON",  # chạy mỗi Thứ Hai lúc 7h sáng
+    schedule_interval="0 7 * * MON",  
     catchup=False,
     tags=["vnstock", "etl", "incremental"],
     max_active_tasks=5,  # cho phép chạy song song 5 batch
@@ -82,7 +83,7 @@ with DAG(
         for symbol in symbol_batch:
             try:
                 limiter.acquire()
-                print(f"⬇️ Bắt đầu xử lý symbol = {symbol}")
+                print(f"Bắt đầu xử lý symbol = {symbol}")
 
                 # --- Bước 1: Đọc dữ liệu cũ (nếu có) ---
                 symbol_path = os.path.join(OUTPUT_DIR, f"{symbol}.csv")
@@ -91,10 +92,10 @@ with DAG(
                     try:
                         df_old = pd.read_csv(symbol_path)
                         if not df_old.empty:
-                            last_date = pd.to_datetime(df_old["date"]).max().strftime("%Y-%m-%d")
-                            print(f"📅 {symbol}: Dữ liệu cũ đến {last_date}")
+                            last_date = pd.to_datetime(df_old["time"]).max().strftime("%Y-%m-%d")
+                            print(f"{symbol}: Dữ liệu cũ đến {last_date}")
                     except Exception as e:
-                        print(f"⚠️ Không đọc được file cũ {symbol}: {e}")
+                        print(f"Không đọc được file cũ {symbol}: {e}")
 
                 # --- Bước 2: Extract dữ liệu mới ---
                 df_new = extract_data(symbol, OUTPUT_DIR, start_date=last_date)
