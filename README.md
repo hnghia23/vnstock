@@ -127,7 +127,8 @@ Hệ thống được chia thành hai phần:
 
 5. Chạy Airflow
    ```bash
-    docker-compose up -d
+   docker build . --tag extending_airflow:latest
+   docker-compose up -d
 
 7. Chạy pipeline streaming
    ```bash
