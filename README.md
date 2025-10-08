@@ -116,23 +116,27 @@ Hệ thống được chia thành hai phần:
 
 
 ## Cài đặt
-1. Clone dự án 
+1. Clone dự án
+   ```bash
     git clone https://github.com/hnghia23/vnstock.git
     cd vnstock
 
-2. Cài đặ thư viện cần thiết
+3. Cài đặt thư viện cần thiết
+   ```bash
     pip install -r requirements.txt
 
-3. Chạy Airflow 
+5. Chạy Airflow
+   ```bash
     docker-compose up -d
 
-4. Chạy pipeline streaming
+7. Chạy pipeline streaming
+   ```bash
     streamlit run src/build.py
 
 
 ## Giao diện Dashboard 
 
-- Nhập mã cổ phiếu cần xem > Update
+- Nhập mã cổ phiếu cần xem >>> Update
 - Dashboard hiển thị, cập nhật liên tục
 
 
