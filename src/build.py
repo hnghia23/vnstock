@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 # root path
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 # Check the symbol for stock code if exist
