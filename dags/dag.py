@@ -56,7 +56,7 @@ with DAG(
     schedule_interval="0 7 * * MON",  
     catchup=False,
     tags=["vnstock", "etl", "incremental"],
-    max_active_tasks=5,  # cho phép chạy song song 5 batch
+    max_active_tasks=18,  # cho phép chạy song song 18 batch
 ) as dag:
 
     # --- Task 1: Đọc danh sách mã cổ phiếu ---
