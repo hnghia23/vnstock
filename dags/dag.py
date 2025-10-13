@@ -8,7 +8,13 @@ from collections import deque
 
 # === Cấu hình đường dẫn ===
 sys.path.append("/opt/airflow/src")
-from batch.etl_vnstock import extract_data, transform_data, load_data
+from batch.etl_vnstock import extract_data, load_data
+
+
+# === Cấu hình chung ===
+DATA_DIR = "/opt/airflow/data"
+SYMBOL_FILE = os.path.join(DATA_DIR, "symbol.csv")
+OUTPUT_DIR = os.path.join(DATA_DIR, "lake")
 
 
 # ===Rate Limiter==
@@ -32,11 +38,6 @@ class SimpleRateLimiter:
         self.calls.append(time.time())
 
 
-# === Cấu hình chung ===
-DATA_DIR = "/opt/airflow/data"
-SYMBOL_FILE = os.path.join(DATA_DIR, "symbol.csv")
-OUTPUT_DIR = os.path.join(DATA_DIR, "lake")
-
 # Giới hạn 5 request/phút
 limiter = SimpleRateLimiter(max_calls=5, period=60)
 
@@ -48,7 +49,6 @@ default_args = {
 
 
 # === DAG ===
-
 with DAG(
     dag_id="vnstock_weekly_etl_incremental",
     default_args=default_args,
@@ -69,6 +69,7 @@ with DAG(
         symbols = df["symbol"].dropna().unique().tolist()
         print(f"Đã tải {len(symbols)} mã cổ phiếu từ symbol.csv.")
         return symbols
+
 
     # --- Task 2: Chia symbol thành nhiều batch ---
     @task()
@@ -103,10 +104,7 @@ with DAG(
                     print(f"{symbol}: Không có dữ liệu mới.")
                     continue
 
-                # --- Bước 3: Transform ---
-                df_new = transform_data(df_new)
-
-                # --- Bước 4: Append vào file hiện có ---
+                # --- Bước 3: Append vào file hiện có ---
                 load_data(df_new, symbol, OUTPUT_DIR, mode="append")
 
                 print(f"Hoàn tất {symbol}, thêm {len(df_new)} dòng mới.")

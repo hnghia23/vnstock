@@ -8,7 +8,7 @@ import ta
 import os
 
 
-# Funtion to extract today stock price data from API 
+# Funtion to extract today's stock price data from API 
 def extract_data(symbol):
     today = date.today()
     tomorrow = today + relativedelta(days=1)
@@ -67,10 +67,3 @@ def update_data(symbol, path):
         print("Đã cập nhật dữ liệu mới")
     else:
         print("Chưa có dữ liệu mới")
-
-
-
-
-
-
-
