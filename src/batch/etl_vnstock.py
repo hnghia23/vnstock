@@ -3,6 +3,10 @@ from tenacity import RetryError
 from datetime import date, timedelta
 import pandas as pd
 import os
+import io
+from minio import Minio
+from minio.error import S3Error
+
 
 
 # === Extract: lấy dữ liệu mới kể từ ngày cuối cùng trong file local ===
@@ -62,3 +66,51 @@ def load_data(df, symbol, output_dir, mode="append"):
     else:
         df.to_csv(path, index=False)
         print(f"Tạo mới file {path}.csv")
+
+
+def load_data_to_minio(df, symbol, minio_client, bucket_name, mode="append"):
+    if df.empty:
+        print(f"Không có dữ liệu mới cho {symbol}")
+        return
+
+    parquet_path = f"{symbol}.parquet"
+
+    # Check bucket
+    if not minio_client.bucket_exists(bucket_name):
+        minio_client.make_bucket(bucket_name)
+
+    # Nếu file đã tồn tại và cần append
+    try:
+        response = minio_client.get_object(bucket_name, parquet_path)
+        old_df = pd.read_parquet(io.BytesIO(response.read()))
+        response.close()
+        response.release_conn()
+
+        if mode == "append":
+            combined_df = pd.concat([old_df, df], ignore_index=True)
+            combined_df.drop_duplicates(inplace=True)
+        else:
+            combined_df = df
+
+        print(f"Append {len(df)} dòng mới vào {parquet_path}")
+
+    except S3Error:
+        # File chưa tồn tại → tạo mới
+        combined_df = df
+        print(f"Tạo mới {parquet_path} trên MinIO")
+
+    # Upload lại dưới dạng Parquet
+    buffer = io.BytesIO()
+    combined_df.to_parquet(buffer, index=False)
+    buffer.seek(0)
+
+    minio_client.put_object(
+        bucket_name=bucket_name,
+        object_name=parquet_path,
+        data=buffer,
+        length=buffer.getbuffer().nbytes,
+        content_type="application/octet-stream"
+    )
+
+    print(f"Upload thành công {parquet_path} lên MinIO ✅")
+

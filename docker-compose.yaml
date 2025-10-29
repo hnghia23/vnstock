@@ -23,6 +23,7 @@ x-airflow-common:
     postgres:
       condition: service_healthy
 
+
 services:
   postgres:
     image: postgres:13
@@ -66,6 +67,19 @@ services:
       _AIRFLOW_WWW_USER_CREATE: 'true'
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - ./storage:/data
+    environment:
+      MINIO_ROOT_USER: vnstock 
+      MINIO_ROOT_PASSWORD: 12345678
+    command: server --console-address ":9001" /data
 
 volumes:
   postgres-db-volume:
