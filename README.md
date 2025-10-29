@@ -64,6 +64,10 @@ Hệ thống được chia thành hai phần:
   │   ├── temp/                   # Dữ liệu real-time trong ngày
   │   └── symbol.csv              # Mã chứng khoán 
   │
+  ├── storage/                    # Thư mục lưu trữ cho MinIO server
+  │
+  │
+  │
   ├── logs/                             
   │
   ├── plugins/ 
@@ -90,27 +94,36 @@ Hệ thống được chia thành hai phần:
   Lưu dữ liệu định dạng `.csv` vào thư mục  
   ```bash
   /data/lake/
+  ```
+
+  Lưu dữ liệu định dạng `.parquet` vào MinIO server, thư mục tương ứng:
+  ```bash
+  /storage/vnstock
+  ```
 
 - **Airflow DAG:**  
     Lên lịch tự động chạy hàng tuần để cập nhật thêm dữ liệu mới.
 
 
 ### Streaming pipeline (Real-time)
-- Gọi API Quote của vnstock để lấy dữ liệu giao dịch theo phút.
-- Ghi dữ liệu tạm thời vào: ```bash /data/temp/
-- Dashboard hiển thị biểu đồ real-time về giá và khối lượng cổ phiếu, cập nhật liên tục.
+  - Gọi API Quote của vnstock để lấy dữ liệu giao dịch theo phút.
+  - Ghi dữ liệu tạm thời vào: 
+  ```bash 
+  /data/temp/
+  ```
+  - Dashboard hiển thị biểu đồ real-time về giá và khối lượng cổ phiếu, cập nhật liên tục.
 
 
 ## Công nghệ sử dụng
 
 | Thành phần           | Công nghệ                        |
 | -------------------- | -------------------------------- |
-| **Ngôn ngữ**         | Python 3.10+                     |
+| **Coding**           | Python 3.10+                     |
 | **ETL**              | pandas, vnstock, requests        |
 | **Orchestration**    | Apache Airflow                   |
 | **Streaming**        | vnstock API, asyncio / threading |
 | **Visualization**    | Streamlit / Plotly               |
-| **Lưu trữ**          | CSV                              |
+| **Storage**          | CSV, parquet                     |
 | **Containerization** | Docker, docker-compose           |
 
 
@@ -141,9 +154,16 @@ Hệ thống được chia thành hai phần:
 - Dashboard hiển thị, cập nhật liên tục
 
 
-## Hướng phát triển
 
--  **Kết nối với Data Lake triển khai hạ tầng lưu trữ (MinIO, HDFS, ...)**  
+## UI Portal 
+
+- localhost:8080 : Apache Airflow 
+
+- localhost: 9001 : MinIO Console
+
+
+
+## Hướng phát triển
 
 -  **Áp dụng Machine Learning để dự báo giá cổ phiếu**  
   (Random Forest, LSTM, ...)
