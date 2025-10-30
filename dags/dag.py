@@ -47,6 +47,52 @@ default_args = {
     "retry_delay": timedelta(minutes=3),
 }
 
+def validate_data(df: pd.DataFrame) -> bool:
+    """Kiểm tra schema, null, duplicate, kiểu dữ liệu"""
+    required_columns = ["time", "open", "high", "low", "close", "volume"]
+    for col in required_columns:
+        if col not in df.columns:
+            print(f"❌ Thiếu cột {col}")
+            return False
+
+    # Check null
+    if df[required_columns].isnull().any().any():
+        print("❌ Phát hiện giá trị null trong dữ liệu.")
+        return False
+
+    # Check duplicate
+    # if df.duplicated(subset=["time", "symbol"]).any():
+    #     print("❌ Phát hiện dòng trùng lặp.")
+    #     return False
+
+    # Check data types
+    try:
+        df["time"] = pd.to_datetime(df["time"], errors="raise")
+        for col in ["open", "high", "low", "close", "volume"]:
+            df[col] = pd.to_numeric(df[col], errors="raise")
+    except Exception as e:
+        print(f"❌ Lỗi kiểu dữ liệu: {e}")
+        return False
+
+    print("✅ Data Validation OK.")
+    return True
+
+
+def quality_check(df: pd.DataFrame) -> bool:
+    """Kiểm tra logic nghiệp vụ (giá trị hợp lý, volume dương, v.v.)"""
+    invalid_prices = df[(df["open"] <= 0) | (df["close"] < 0)]
+    if not invalid_prices.empty:
+        print(f"❌ Phát hiện giá <= 0 ở {len(invalid_prices)} dòng.")
+        return False
+
+    invalid_vol = df[df["volume"] < 0]
+    if not invalid_vol.empty:
+        print(f"❌ Phát hiện volume âm ở {len(invalid_vol)} dòng.")
+        return False
+
+    print("✅ Quality Check OK.")
+    return True
+
 
 # === DAG ===
 with DAG(
@@ -103,8 +149,18 @@ with DAG(
                 if df_new is None or df_new.empty:
                     print(f"{symbol}: Không có dữ liệu mới.")
                     continue
+                
+                # --- Bước 3: Validation ---
+                if not validate_data(df_new):
+                    print(f"{symbol}: ❌ Data Validation thất bại, bỏ qua.")
+                    continue
 
-                # --- Bước 3: Append vào file hiện có ---
+                # --- Bước 4: Quality Check ---
+                if not quality_check(df_new):
+                    print(f"{symbol}: ❌ Quality Check thất bại, bỏ qua.")
+                    continue
+
+                # --- Bước 5: Append vào file hiện có ---
                 load_data(df_new, symbol, OUTPUT_DIR, mode="append")
 
                 print(f"Hoàn tất {symbol}, thêm {len(df_new)} dòng mới.")
